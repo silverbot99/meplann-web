@@ -103,6 +103,7 @@ nav {
     font-weight: 700;
     background: linear-gradient(45deg, #fff, var(--accent-glow));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -151,13 +152,47 @@ nav {
 
 .phone-mockup {
     width: 100%;
-    max-width: 500px;
-    /* Using the final cinematic mockup */
-    background: url('meplann_mockup_phone_final_1767284060967.png') center/cover;
-    aspect-ratio: 1/1;
-    /* Mockup is 1:1 or similar, adjust for containment */
-    border: none;
-    box-shadow: none;
+    max-width: 400px;
+    /* Slightly adjusted for better framing */
+    aspect-ratio: auto;
+    /* Let content dictate height */
+    position: relative;
+    z-index: 10;
+}
+
+.device-frame {
+    position: relative;
+    border-radius: 40px;
+    background: #000;
+    padding: 12px;
+    box-shadow:
+        0 0 0 2px #333,
+        0 0 0 4px #1a1a1a,
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 0 60px rgba(124, 77, 255, 0.2);
+    overflow: hidden;
+}
+
+.device-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 32px;
+    /* Match inner curvature */
+}
+
+/* Simulated Home Bar */
+.device-frame::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    z-index: 20;
 }
 
 /* Buttons */
