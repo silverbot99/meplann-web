@@ -8,43 +8,41 @@ get_header();
     <section class="hero-section">
         <div class="container">
             <div class="hero-grid">
+                <!-- Text Side -->
                 <div class="hero-text">
-                    <div class="hero-eyebrow">
-                        <span>✨ iOS 18 Featured App</span>
-                        <span>·</span>
-                        <span>Thấu Hiểu Năng Lượng</span>
-                    </div>
+                    <span class="hero-eyebrow">For people who overthink everything</span>
 
                     <h1 class="hero-title">
-                        Lên kế hoạch theo <span>năng lượng</span> của bạn.
+                        Plan around your
+                        <span>energy,</span>
+                        not against it.
                     </h1>
 
                     <p class="hero-desc">
-                        Say 'no' với những chiếc to-do list cứng nhắc bắt ngày nào cũng năng suất như nhau. 
-                        MePlann là ứng dụng iOS biết 'đọc vị' trạng thái của bạn: Đang tụt mood? Xếp việc nhẹ nhàng. 
-                        Đang vào guồng? Đẩy việc quan trọng lên!
+                        Say no to to-do lists that expect you to be a machine every single day.
+                        MePlann is the app that 'reads' your energy.
+                        Feeling sluggish? We queue up the easy wins.
+                        In the zone? We bring on the heavy lifting.
+                        Ditch the exhausting time management systems — it's time to work with your flow, not against it.
                     </p>
 
-                    <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center;">
-                        <a href="https://apps.apple.com" target="_blank" class="btn">
-                            <span> Tải Trên App Store</span>
-                        </a>
-                        <a href="#features" class="btn btn-outline">
-                            <span>Khám Phá Tính Năng</span>
-                        </a>
+                    <div class="hero-cta-group">
+                        <a href="https://apps.apple.com" target="_blank" class="btn"> Start planning</a>
+                        <a href="#how-it-works" class="btn btn-outline">How it works</a>
                     </div>
 
                     <div class="hero-rating">
                         <span class="stars">★★★★★</span>
-                        <strong>4.9 / 5.0 Rating</strong>
-                        <span>(1,280+ Đánh giá trên App Store)</span>
+                        <strong>4.9 / 5.0</strong>
+                        <span>— 1,280+ App Store reviews</span>
                     </div>
                 </div>
 
+                <!-- App Image -->
                 <div class="hero-image">
                     <div class="phone-mockup">
                         <div class="device-frame">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/app_preview.png" alt="Giao diện ứng dụng MePlann iOS App">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/app_preview.png" alt="MePlann App Interface">
                         </div>
                     </div>
                 </div>
@@ -59,218 +57,245 @@ get_header();
                 <div class="commitment-item">
                     <div class="commitment-icon">🛡️</div>
                     <div class="commitment-text">
-                        <strong>100% Privacy & Local</strong>
-                        <span>Dữ liệu lưu an toàn trên máy</span>
+                        <strong>100% Privacy First</strong>
+                        <span>All data stored locally on-device</span>
                     </div>
                 </div>
                 <div class="commitment-item">
                     <div class="commitment-icon">🧠</div>
                     <div class="commitment-text">
                         <strong>AI Mood Engine</strong>
-                        <span>Phân tích nhịp năng lượng</span>
+                        <span>Adapts to your real energy</span>
                     </div>
                 </div>
                 <div class="commitment-item">
                     <div class="commitment-icon">⌚</div>
                     <div class="commitment-text">
-                        <strong>Apple Ecosystem</strong>
-                        <span>Đồng bộ Watch, Widget, Shortcut</span>
+                        <strong>Full Apple Ecosystem</strong>
+                        <span>Watch, Widget, Siri Shortcuts</span>
                     </div>
                 </div>
                 <div class="commitment-item">
                     <div class="commitment-icon">🕊️</div>
                     <div class="commitment-text">
-                        <strong>No Guilt Rest</strong>
-                        <span>Không áp lực khi bạn nghỉ ngơi</span>
+                        <strong>No Guilt. No Pressure.</strong>
+                        <span>Rest is part of the plan</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CORE FEATURES SECTION -->
-    <section class="section" id="features">
+    <!-- HOW IT BEHAVES -->
+    <section class="section" id="how-it-works">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">01 / TÍNH NĂNG CỐT LÕI</span>
-                <h2 class="section-title">Thực tế khi bạn cần kế hoạch,<br>nhẹ nhàng khi bạn cần nghỉ</h2>
+                <span class="section-tag">How it behaves</span>
+                <h2 class="section-title">Practical when you need a plan,<br>gentle when you need a break</h2>
             </div>
 
             <div class="features-grid">
                 <div class="feature-card">
                     <span class="card-icon">🫂</span>
-                    <h3>Học cách bạn làm việc</h3>
-                    <p>Bài trắc nghiệm ngắn giúp MePlann nhận diện bạn tư duy theo cấu trúc hay bộc phát ý tưởng bất chợt — để sắp xếp kế hoạch phù hợp với phong cách của chính bạn.</p>
+                    <h3>It learns how you work</h3>
+                    <p>A short self-discovery profile tells MePlann whether you think in structure or in bursts of ideas — and it plans differently depending on which one you are.</p>
                 </div>
 
                 <div class="feature-card">
                     <span class="card-icon">🧠</span>
-                    <h3>Tái định hình (Reframing Task)</h3>
-                    <p>Khi bạn bí ý tưởng hoặc căng thẳng, MePlann không hô hào "cố lên" suông. Hệ thống tự động chia nhỏ công việc thành một bước tiếp theo cực kỳ dễ làm ngay.</p>
+                    <h3>Reframes, not pep talks</h3>
+                    <p>When you're stuck or stressed, it doesn't just tell you to "push through." It breaks the problem into a smaller, actually doable next step.</p>
                 </div>
 
                 <div class="feature-card">
                     <span class="card-icon">🕊️</span>
-                    <h3>Không dằn vặt khi nghỉ ngơi</h3>
-                    <p>Danh sách chưa xong không bị coi là thất bại. Nếu nhận diện bạn đang quá tải, MePlann tự động ẩn bớt việc để bạn giải tỏa bớt cognitive load.</p>
+                    <h3>No guilt for resting</h3>
+                    <p>An unfinished list isn't treated as failure. If you're overloaded, MePlann quietly cuts down what it shows you instead of piling on more.</p>
                 </div>
 
                 <div class="feature-card">
                     <span class="card-icon">🔮</span>
                     <h3>BrainDump & Tarot Reflection</h3>
-                    <p>Xả sạch suy nghĩ hỗn loạn bằng Voice Note / Văn bản và rút một lá bài định hướng tâm trí trước khi bắt đầu công việc.</p>
+                    <p>Clear your head first. A quick brain dump or a one-card tarot pull sits right next to your task board — because clearing your head usually comes before clearing your list.</p>
                 </div>
 
                 <div class="feature-card">
                     <span class="card-icon">📊</span>
-                    <h3>Báo cáo Nhịp Năng Lượng</h3>
-                    <p>Theo dõi xu hướng năng lượng theo ngày và tuần để tìm ra thời điểm vàng làm việc hiệu quả nhất trong ngày của bạn.</p>
+                    <h3>Energy Pattern Reports</h3>
+                    <p>Track your energy rhythms by day and week to discover your hidden peak hours — and finally understand why Mondays feel effortless but Thursdays don't.</p>
                 </div>
 
                 <div class="feature-card">
                     <span class="card-icon">🔒</span>
-                    <h3>Bảo mật tuyệt đối</h3>
-                    <p>Toàn bộ suy nghĩ cá nhân của bạn được lưu local mã hóa trên thiết bị iOS. Không bao giờ thu thập hoặc bán dữ liệu riêng tư.</p>
+                    <h3>Your data stays yours</h3>
+                    <p>Everything is stored locally first. Cloud backup is there if you want it, never required — your unfiltered thoughts don't need to leave your device.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- APPLE ECOSYSTEM INTEGRATION -->
-    <section class="section eco-section" id="ecosystem">
+    <!-- WHAT MAKES IT DIFFERENT -->
+    <section class="section spirit-section" id="what-makes-it-different">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">02 / HỆ SINH THÁI APPLE</span>
-                <h2 class="section-title">Tối ưu hoàn hảo cho iPhone, Apple Watch & iPad</h2>
+                <span class="section-tag">What makes it different</span>
+                <h2 class="section-title">Built to fit <em>you,</em><br>not the other way around</h2>
+            </div>
+
+            <div class="spirit-grid">
+                <div class="spirit-item">
+                    <h3>Skip the system that never worked</h3>
+                    <p>You've probably tried Pomodoro, GTD, bullet journaling. MePlann doesn't ask you to adopt one more method — it adjusts its own suggestions to how your brain runs.</p>
+                </div>
+
+                <div class="spirit-item">
+                    <h3>Room to think before you plan</h3>
+                    <p>A quick tarot pull or a five-minute brain dump, sitting right next to your task board — because clearing your head usually comes before clearing your list.</p>
+                </div>
+
+                <div class="spirit-item">
+                    <h3>Your data stays yours</h3>
+                    <p>Everything is stored locally first. Cloud backup is there if you want it, never required — your unfiltered thoughts don't need to leave your device.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPLE ECOSYSTEM -->
+    <section class="section" id="ecosystem">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Built for Apple Ecosystem</span>
+                <h2 class="section-title">On your iPhone, Watch & beyond</h2>
             </div>
 
             <div class="eco-grid">
                 <div class="eco-card">
-                    <h4>📱 Interactive iOS 18 Widgets</h4>
-                    <p>Xem nhịp năng lượng và đánh dấu hoàn thành việc ngay trên màn hình khóa (Lock Screen) và Home Screen.</p>
+                    <h4>📱 iOS 18 Interactive Widgets</h4>
+                    <p>Check your energy level and tick tasks right from the Home Screen or Lock Screen — without opening the app.</p>
                 </div>
-
                 <div class="eco-card">
                     <h4>⌚ Apple Watch Complications</h4>
-                    <p>Nhận gợi ý micro-break và kiểm tra công việc tiếp theo ngay trên cổ tay mà không cần mở điện thoại.</p>
+                    <p>Receive gentle micro-break nudges and see what's next on your wrist without reaching for your phone.</p>
                 </div>
-
                 <div class="eco-card">
-                    <h4>⚡ Siri Shortcuts & Live Activities</h4>
-                    <p>Ghi nhanh BrainDump bằng giọng nói với Siri: "Hey Siri, BrainDump with MePlann".</p>
+                    <h4>⚡ Siri Shortcuts</h4>
+                    <p>Voice-log your brain dump with Siri: "Hey Siri, BrainDump with MePlann" — captured instantly, sorted later.</p>
                 </div>
-
                 <div class="eco-card">
-                    <h4>☁️ Seamless iCloud Sync</h4>
-                    <p>Đồng bộ tức thì và bảo mật trên tất cả các thiết bị Apple của bạn.</p>
+                    <h4>☁️ iCloud Sync</h4>
+                    <p>Seamlessly and securely sync across all your Apple devices. Private by default, always encrypted.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PRICING SECTION -->
+    <!-- MISSION SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="mission-box">
+                <span class="section-tag">Why we're building this</span>
+                <h2>Plan the day.<br>Understand the pattern.</h2>
+                <p>Standard productivity tools just push for maximum output. We're asking a better question: why is a task effortless on Monday but completely overwhelming by Thursday? MePlann is built to help you discover those hidden patterns in your energy, one day at a time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
     <section class="section" id="pricing">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">03 / BẢNG GIÁ DỊCH VỤ</span>
-                <h2 class="section-title">Lựa chọn gói phù hợp với bạn</h2>
+                <span class="section-tag">Pricing</span>
+                <h2 class="section-title">Simple, honest pricing</h2>
             </div>
 
             <div class="pricing-grid">
-                <!-- Plan 1 -->
                 <div class="pricing-card">
-                    <h3>MePlann Starter</h3>
-                    <p style="color:var(--text-muted);">Dành cho người mới bắt đầu</p>
-                    <div class="pricing-price">Miễn phí <span>/ trọn đời</span></div>
+                    <h3>MePlann Free</h3>
+                    <p>Get started — no pressure</p>
+                    <div class="pricing-price">Free <span>/ forever</span></div>
                     <ul class="pricing-features">
-                        <li>✓ Lên kế hoạch theo ngày cơ bản</li>
-                        <li>✓ Phân tích năng lượng thủ công</li>
-                        <li>✓ Lưu trữ local an toàn</li>
-                        <li>✓ Ghi chú BrainDump văn bản</li>
+                        <li>✓ Daily planning basics</li>
+                        <li>✓ BrainDump text notes</li>
+                        <li>✓ Local storage only</li>
+                        <li>✓ Manual energy check-in</li>
                     </ul>
-                    <a href="https://apps.apple.com" target="_blank" class="btn btn-outline btn-block">Tải Miễn Phí</a>
+                    <a href="https://apps.apple.com" target="_blank" class="btn btn-outline" style="width:100%;display:block;text-align:center;">Download Free</a>
                 </div>
 
-                <!-- Plan 2 -->
                 <div class="pricing-card featured">
-                    <span class="pricing-badge">Khuyên Dùng</span>
+                    <span class="pricing-badge">Most Popular</span>
                     <h3>MePlann Pro</h3>
-                    <p style="color:var(--text-muted);">Trải nghiệm thấu hiểu toàn diện</p>
-                    <div class="pricing-price">99.000đ <span>/ tháng</span></div>
+                    <p>The full energy-adaptive experience</p>
+                    <div class="pricing-price">$4.99 <span>/ month</span></div>
                     <ul class="pricing-features">
-                        <li>✓ Tự động phân tích AI Mood Engine</li>
-                        <li>✓ AI Reframing & Chia nhỏ micro-steps</li>
-                        <li>✓ Đồng bộ Apple Watch & Interactive Widgets</li>
-                        <li>✓ BrainDump giọng nói & Tarot Reflection</li>
-                        <li>✓ Báo cáo phân tích nhịp năng lượng sâu</li>
+                        <li>✓ AI Mood Engine & auto-scheduling</li>
+                        <li>✓ AI Task Reframing & micro-steps</li>
+                        <li>✓ Apple Watch + Widgets</li>
+                        <li>✓ BrainDump voice & Tarot Reflection</li>
+                        <li>✓ Energy Pattern Reports</li>
+                        <li>✓ iCloud sync across all devices</li>
                     </ul>
-                    <a href="https://apps.apple.com" target="_blank" class="btn btn-block">Dùng Thử 7 Ngày Miễn Phí</a>
+                    <a href="https://apps.apple.com" target="_blank" class="btn" style="width:100%;display:block;text-align:center;">Try Free 7 Days</a>
                 </div>
 
-                <!-- Plan 3 -->
                 <div class="pricing-card">
                     <h3>Lifetime Supporter</h3>
-                    <p style="color:var(--text-muted);">Sở hữu trọn đời & Ủng hộ Studio</p>
-                    <div class="pricing-price">999.000đ <span>/ trọn đời</span></div>
+                    <p>Own it forever. Support the studio.</p>
+                    <div class="pricing-price">$39.99 <span>/ once</span></div>
                     <ul class="pricing-features">
-                        <li>✓ Toàn bộ tính năng MePlann Pro</li>
-                        <li>✓ Cập nhật miễn phí mọi phiên bản tương lai</li>
-                        <li>✓ Huy hiệu Supporter đặc biệt trên App</li>
-                        <li>✓ Hỗ trợ ưu tiên 1:1 từ đội ngũ phát triển</li>
+                        <li>✓ Everything in Pro</li>
+                        <li>✓ All future updates included</li>
+                        <li>✓ Supporter badge in-app</li>
+                        <li>✓ Priority 1:1 support</li>
                     </ul>
-                    <a href="https://apps.apple.com" target="_blank" class="btn btn-gold btn-block">Mua Trọn Đời</a>
+                    <a href="https://apps.apple.com" target="_blank" class="btn btn-outline" style="width:100%;display:block;text-align:center;border-color:var(--accent-gold);color:var(--accent-gold);">Get Lifetime</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- REVIEWS SECTION -->
-    <section class="section" id="reviews" style="background:var(--bg-alt);">
+    <!-- REVIEWS -->
+    <section class="section" id="reviews">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">04 / ĐÁNH GIÁ TỪ CỘNG ĐỒNG</span>
-                <h2 class="section-title">Người dùng iOS nói gì về MePlann?</h2>
+                <span class="section-tag">User Reviews</span>
+                <h2 class="section-title">What overthinkers are saying</h2>
             </div>
 
             <div class="reviews-grid">
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <p style="font-size:0.98rem;margin:12px 0;color:var(--text-secondary);">
-                        "Mình là người hayoverthink và luôn cảm thấy dằn vặt nếu to-do list cuối ngày còn thừa việc. MePlann thực sự thay đổi tư duy của mình, app tự giảm bớt việc khi thấy mình quá tải."
-                    </p>
+                    <p class="review-quote">"I've tried everything — Notion, Things, Todoist. MePlann is the first app that doesn't make me feel guilty for having a slow day. It actually adjusts to me."</p>
                     <div class="review-user">
                         <div class="review-avatar">N</div>
                         <div>
-                            <strong>Ngọc Anh</strong>
-                            <div style="font-size:0.8rem;color:var(--text-muted);">UI/UX Designer · Hà Nội</div>
+                            <strong>Ngoc Anh</strong>
+                            <span>UI/UX Designer · Hanoi</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <p style="font-size:0.98rem;margin:12px 0;color:var(--text-secondary);">
-                        "Tính năng AI Task Reframing cực đỉnh. Mấy task to đùng nhìn phát hãi được chia thành những bước nhỏ xíu làm phát xong luôn. Widget iOS 18 cực đẹp!"
-                    </p>
+                    <p class="review-quote">"The Task Reframing feature is a game-changer. Scary big tasks become tiny steps that I can actually start. iOS 18 widget looks gorgeous too."</p>
                     <div class="review-user">
                         <div class="review-avatar">M</div>
                         <div>
-                            <strong>Minh Hoàng</strong>
-                            <div style="font-size:0.8rem;color:var(--text-muted);">Software Engineer · TP.HCM</div>
+                            <strong>Minh Hoang</strong>
+                            <span>Software Engineer · HCMC</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <p style="font-size:0.98rem;margin:12px 0;color:var(--text-secondary);">
-                        "Giao diện tinh tế chuẩn phong cách Apple. Cảm giác dùng nhẹ nhàng, không bị hối thúc. Rất đáng giá cho người muốn làm việc bền vững."
-                    </p>
+                    <p class="review-quote">"The design feels calm and intentional — like the app genuinely cares about not overwhelming you. That's rare. Switched from a premium competitor and never looked back."</p>
                     <div class="review-user">
                         <div class="review-avatar">T</div>
                         <div>
                             <strong>Thu Trang</strong>
-                            <div style="font-size:0.8rem;color:var(--text-muted);">Content Creator · Đà Nẵng</div>
+                            <span>Content Creator · Da Nang</span>
                         </div>
                     </div>
                 </div>
@@ -278,39 +303,44 @@ get_header();
         </div>
     </section>
 
-    <!-- FAQ SECTION -->
+    <!-- FAQ -->
     <section class="section" id="faq">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">05 / CÂU HỎI THƯỜNG GẶP</span>
-                <h2 class="section-title">Giải đáp thắc mắc</h2>
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Common questions</h2>
             </div>
 
             <div class="faq-grid">
                 <div class="faq-item">
-                    <div class="faq-question">❓ MePlann khác gì so với các ứng dụng To-Do List thông thường?</div>
-                    <div class="faq-answer">Các ứng dụng khác chỉ tập trung vào việc ép bạn hoàn thành tối đa số lượng công việc. MePlann tập trung vào nhịp năng lượng thực tế của bạn, giúp bạn làm việc hiệu quả khi sung sức và nghỉ ngơi hợp lý khi quá tải.</div>
+                    <div class="faq-question">How is MePlann different from a regular to-do list app?</div>
+                    <div class="faq-answer">Most apps expect you to operate at 100% every day. MePlann adapts to your actual energy level — surfacing lighter tasks when you're drained, and your important work when you're in the zone.</div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">❓ Dữ liệu cá nhân của tôi có được bảo mật không?</div>
-                    <div class="faq-answer">Có! MePlann áp dụng cơ chế Local-First. Toàn bộ thông tin suy nghĩ, kế hoạch của bạn được lưu mã hóa trực tiếp trên máy và iCloud của bạn.</div>
+                    <div class="faq-question">Is my data private and secure?</div>
+                    <div class="faq-answer">Absolutely. MePlann stores everything locally on your device by default. iCloud sync is optional and always encrypted. We don't sell or analyze your personal data.</div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">❓ Ứng dụng có hỗ trợ tiếng Việt không?</div>
-                    <div class="faq-answer">Có, MePlann hỗ trợ 100% giao diện và nội dung tiếng Việt chuẩn xác.</div>
+                    <div class="faq-question">Does it work with Apple Watch?</div>
+                    <div class="faq-answer">Yes. MePlann supports Apple Watch complications so you can check your next task or log a micro-break reminder right from your wrist.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What is the Tarot Reflection feature?</div>
+                    <div class="faq-answer">It's a lightweight mindfulness tool — a single-card pull that gives you a reflective prompt before planning your day. It's optional and designed to help you transition from scattered thinking to focused planning.</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- DYNAMIC WORDPRESS BLOG POSTS -->
-    <section class="section" id="insights" style="background:var(--bg-alt);">
+    <!-- DYNAMIC BLOG POSTS -->
+    <section class="section blog-section" id="blog">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">06 / INSIGHTS & TƯ DUY NĂNG SUẤT</span>
-                <h2 class="section-title">Bài Viết & Góc Nhìn Mới Nhất</h2>
+                <span class="section-tag">Insights & Updates</span>
+                <h2 class="section-title">Notes on energy, planning & the mind</h2>
             </div>
 
             <div class="features-grid">
@@ -320,21 +350,20 @@ get_header();
                     'posts_per_page' => 3,
                     'post_status'    => 'publish',
                 ));
-
                 if ($query->have_posts()) :
                     while ($query->have_posts()) : $query->the_post();
                 ?>
                         <article class="feature-card">
                             <span class="section-tag"><?php echo get_the_date('M d, Y'); ?></span>
-                            <h3><a href="<?php the_permalink(); ?>" style="color:var(--accent);text-decoration:none;"><?php the_title(); ?></a></h3>
-                            <p><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
-                            <a href="<?php the_permalink(); ?>" style="color:var(--accent-light);font-weight:600;margin-top:12px;display:inline-block;text-decoration:none;">Đọc tiếp →</a>
+                            <h3><a href="<?php the_permalink(); ?>" style="color:#fff;text-decoration:none;"><?php the_title(); ?></a></h3>
+                            <p><?php echo wp_trim_words(get_the_excerpt(), 22); ?></p>
+                            <a href="<?php the_permalink(); ?>" style="color:var(--accent-glow);font-weight:600;margin-top:14px;display:inline-block;text-decoration:none;">Read more →</a>
                         </article>
                 <?php
                     endwhile;
                     wp_reset_postdata();
                 else :
-                    echo '<p style="text-align:center;color:var(--text-muted);">Chưa có bài viết mới trong WP-Admin.</p>';
+                    echo '<p style="color:var(--text-dim);text-align:center;">No posts yet.</p>';
                 endif;
                 ?>
             </div>
