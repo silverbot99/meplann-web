@@ -104,7 +104,7 @@ get_header();
                 <div class="feature-card">
                     <span class="card-icon">🧠</span>
                     <h3>Reframes, not pep talks</h3>
-                    <p>When you're stuck or stressed, it doesn't just tell you to "push through." It breaks the problem into a smaller, actually doable next step.</p>
+                    <p>When you're stuck or overloaded, it doesn't just tell you to "push through." It breaks the problem into a smaller, actually doable next step.</p>
                 </div>
 
                 <div class="feature-card">
@@ -329,7 +329,7 @@ get_header();
 
                 <div class="faq-item">
                     <div class="faq-question">What is the Tarot Reflection feature?</div>
-                    <div class="faq-answer">It's a lightweight mindfulness tool — a single-card pull that gives you a reflective prompt before planning your day. It's optional and designed to help you transition from scattered thinking to focused planning.</div>
+                    <div class="faq-answer">It's a lightweight reflection tool — a single-card pull that gives you a reflective prompt before planning your day. It's optional and designed to help you transition from scattered thinking to focused planning.</div>
                 </div>
             </div>
         </div>

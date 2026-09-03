@@ -53,63 +53,72 @@
     <section class="container doc-content">
         <a href="index.html" class="back-link">← Back to Home</a>
         <h1>Privacy Policy</h1>
-        <p><strong>Last Updated: January 7, 2026</strong></p>
+        <p><strong>Last Updated: September 2, 2026</strong></p>
 
-        <p>MePlann respects your privacy. We prioritize local data storage and transparency. This policy explains how we
-            handle your information.</p>
+        <p>MePlann keeps your data on your device. This policy explains what stays there, and the few cases where
+            something leaves.</p>
 
         <h2>1. Data Collection & Usage</h2>
         <ul>
-            <li><strong>Personal Information:</strong> MePlann stores your profile, tasks, and journal entries
-                <strong>locally on your device</strong> using Apple's Core Data and UserDefaults. We do not maintain a
-                central server database of your personal thoughts.
-            </li>
-            <li><strong>Health Data:</strong> If enabled, we may write "Mindful Minutes" to Apple HealthKit. This data
-                stays within your device ecosystem.</li>
+            <li><strong>Personal Information:</strong> MePlann stores your profile, boards, tasks, notes, journal
+                entries and chat history <strong>on your device</strong>, using Apple's Core Data and UserDefaults.
+                There is no MePlann account and no server-side copy of this data.</li>
+            <li><strong>Notifications:</strong> If you allow notifications, your device registers with Apple's push
+                service. We do not send you push notifications from our servers; reminders are scheduled locally on
+                your device.</li>
+            <li><strong>Payments:</strong> Subscriptions are handled by Apple StoreKit. We never see your card details.</li>
         </ul>
+        <p>Two optional features send data off your device, and only when you turn them on: connecting a Google account
+            (section 2) and the AI features (section 3).</p>
 
         <h2>2. Google User Data Policy</h2>
         <p>MePlann's use and transfer to any other app of information received from Google APIs will adhere to <a
                 href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API
                 Services User Data Policy</a>, including the Limited Use requirements.</p>
+        <p>Connecting a Google account is entirely optional. MePlann works fully without it.</p>
         <ul>
-            <li><strong>Data Accessed:</strong> Our app requests access to your <strong>Google Calendar</strong>
-                (primary calendar read/write access) to allow you to view and manage your schedule alongside your
-                productivity tasks.</li>
-            <li><strong>Data Usage:</strong> We use this data solely to display your calendar events within the MePlann
-                interface and to allow you to sync MePlann tasks to your Google Calendar. We do not use this data for
-                any other purpose.</li>
-            <li><strong>Data Sharing:</strong> We do not share Google user data with any third-party services. Your
-                Google
-                User Data is never sold, shared, or used for advertising or any other purpose other than the core
-                functionality of this app.</li>
-            <li><strong>Data Storage & Protection:</strong> Google user data is fetched on-demand and may be cached
-                locally on your device for performance. We do keep your data secure using standard device-level
-                encryption. We do not store your Google data on our own servers.</li>
-            <li><strong>Data Retention & Deletion:</strong> We retain Google user data only as long as you have your
-                Google account connected within MePlann. You can revoke access at any time via the Google Security
-                Settings or by disconnecting your account within MePlann, which will immediately delete all locally
-                cached Google data.</li>
+            <li><strong>Google Calendar (<code>calendar.events</code>):</strong> Write-only. When you tap "Add to
+                Calendar" on a task, MePlann creates an event on your primary calendar. <strong>MePlann cannot read your
+                    calendar</strong> — it never fetches, lists, or displays your existing events.</li>
+            <li><strong>Google Drive (<code>drive.file</code>):</strong> Used for optional backup. When you tap "Back up
+                now", MePlann writes a single file, <code>meplann_backup.json</code>, to your own Drive. It contains your
+                boards, tasks, notes, chat history, braindumps and attached images. If you have connected Drive, images
+                you attach to cards are also uploaded so they sync between your devices. This scope only lets MePlann
+                see files it created itself — it cannot read the rest of your Drive.</li>
+            <li><strong>Data Sharing:</strong> We do not share Google user data with any third party. It is never sold or
+                used for advertising.</li>
+            <li><strong>Data Storage &amp; Protection:</strong> Google user data stays between your device and your own
+                Google account. <strong>We do not store your Google data on our servers.</strong></li>
+            <li><strong>Data Retention &amp; Deletion:</strong> Your backup file lives in your Drive and stays there
+                until you delete it — signing out of MePlann does not remove it. You can revoke MePlann's access at any
+                time in your <a href="https://myaccount.google.com/permissions" target="_blank">Google account
+                    permissions</a>, and delete the backup file directly from your Drive.</li>
         </ul>
-
-        <p>We use Apple StoreKit for subscription payments. We do not have access to your credit card details.</p>
 
         <h2>3. AI & Data Processing</h2>
         <ul>
-            <li><strong>AI Features:</strong> MePlann uses third-party Artificial Intelligence (AI) services,
-                specifically
-                OpenAI API, to provide features such as the "Soulmate Chat", "Tarot Readings", and
-                "Reframes".</li>
-            <li><strong>Data Transmission:</strong> When you use these specific features, your text input (and relevant
-                context like your selected mood or board data) is sent securely to the AI provider to generate a
-                response.</li>
-            <li><strong>Privacy:</strong> We connect to these services using standard APIs that do not use your data for
-                training public models. Your personal chats are not stored on MePlann's servers; they are either
-                processed transiently or stored locally on your device.</li>
+            <li><strong>AI Features:</strong> MePlann sends data to the <strong>OpenAI API</strong> for: chat, tarot
+                readings, reframes, BrainFlow analysis, task brainstorming, task prioritization, smart task detection,
+                feed card generation, and the wording of your reminder notifications.</li>
+            <li><strong>Data Transmission:</strong> Your text input is sent, together with context that helps the
+                assistant respond usefully: your work-style profile, your Multiple Intelligences results, your workload
+                score, the current conversation history, and — when you @-mention a board or a date — the tasks and
+                cards you referenced.</li>
+            <li><strong>Requests you didn't start:</strong> To word your scheduled reminders, MePlann makes a small
+                number of AI requests in the background, which include your workload score and how many tasks are
+                pending or overdue. You can stop these by turning off notifications for MePlann.</li>
+            <li><strong>Privacy:</strong> Per OpenAI's API data usage policy, data sent through the API is not used to
+                train their models; OpenAI may retain it for a limited period for abuse monitoring. Your conversations
+                are stored on your device, not on MePlann's servers.</li>
         </ul>
 
-        <h2>4. Your Rights</h2>
-        <p>You can delete all local data by deleting the app or using the reset options within the app settings.</p>
+        <h2>4. Deleting your data</h2>
+        <p>Because your data lives on your device, <strong>deleting the app deletes all of it</strong> — there is no
+            account to close and nothing of yours left on our side.</p>
+        <p>If you connected Google: revoke MePlann's access in your <a
+                href="https://myaccount.google.com/permissions" target="_blank">Google account permissions</a>, and
+            delete <code>meplann_backup.json</code> from your Drive if you made a backup. Calendar events MePlann
+            created stay in your calendar until you remove them.</p>
 
         <h2>5. Contact Us</h2>
         <p>If you have questions, contact us at <strong>support@meplann.com</strong>.</p>
