@@ -1,161 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MePlann | A planner that adapts to how your mind actually works</title>
-    <meta name="description"
-        content="MePlann is a planning app for people who overthink everything. It reads your energy and mood, then adjusts how it plans your day — instead of forcing you into someone else's system.">
+    <title>MePlann — Your Soulmate Strategist</title>
+    <meta name="description" content="An AI partner that understands you deeply. MePlann learns your patterns, anticipates your needs, and helps you execute your strategy with clarity and confidence.">
 
     <!-- OpenGraph Meta -->
-    <meta property="og:title" content="MePlann | Plan around your energy, not against it">
-    <meta property="og:description" content="A planning app for people whose minds don't run on autopilot. Adapt to your energy & focus daily.">
+    <meta property="og:title" content="MePlann — Your Soulmate Strategist">
+    <meta property="og:description" content="An intimate AI partner that knows you, understands your patterns, and helps you execute with confidence.">
     <meta property="og:type" content="website">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Token system — declare all tokens in bare :root */
+        :root {
+            --color-ground: #F9F7F5;
+            --color-dark: #2B2620;
+            --color-text-primary: #2B2620;
+            --color-text-secondary: #8A7F78;
+            --color-text-dim: #A89F93;
+            --color-accent-primary: #9B8BA8;
+            --color-accent-warm: #C17A6F;
+            --color-border: #E8E3DE;
+            --color-card-bg: #FEFAF5;
+
+            /* Type scale */
+            --type-display-size: 3.5rem;
+            --type-h2-size: 2.2rem;
+            --type-h3-size: 1.4rem;
+            --type-body-size: 1.1rem;
+            --type-caption-size: 0.95rem;
+
+            --type-display-family: "Crimson Text", serif;
+            --type-body-family: "Inter", sans-serif;
+
+            --spacing-xs: 0.75rem;
+            --spacing-sm: 1.5rem;
+            --spacing-md: 2.5rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                --color-ground: #1A1815;
+                --color-dark: #F9F7F5;
+                --color-text-primary: #F9F7F5;
+                --color-text-secondary: #B8ADA0;
+                --color-text-dim: #8A7F78;
+                --color-accent-primary: #B29BC4;
+                --color-accent-warm: #E5A89F;
+                --color-border: #3A3530;
+                --color-card-bg: #2B2620;
+            }
+        }
+
+        :root[data-theme="dark"] {
+            --color-ground: #1A1815;
+            --color-dark: #F9F7F5;
+            --color-text-primary: #F9F7F5;
+            --color-text-secondary: #B8ADA0;
+            --color-text-dim: #8A7F78;
+            --color-accent-primary: #B29BC4;
+            --color-accent-warm: #E5A89F;
+            --color-border: #3A3530;
+            --color-card-bg: #2B2620;
+        }
+
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--type-body-family);
+            font-size: var(--type-body-size);
+            line-height: 1.6;
+            color: var(--color-text-primary);
+            background: var(--color-ground);
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--color-accent-primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--color-accent-warm);
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: var(--type-display-family);
+            line-height: 1.2;
+            text-wrap: balance;
+        }
+
+        h1 {
+            font-size: var(--type-display-size);
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: var(--type-h2-size);
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: var(--type-h3-size);
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-label {
+            display: block;
+            font-size: var(--type-caption-size);
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-text-secondary);
+            margin-bottom: var(--spacing-sm);
+            font-family: var(--type-body-family);
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md) 0;
+            border-bottom: 1px solid var(--color-border);
+            position: sticky;
+            top: 0;
+            background: var(--color-ground);
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: var(--type-display-family);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-accent-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .nav-link {
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--color-accent-primary);
+        }
+
+        .lang-switcher {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .lang-link {
+            font-size: 0.85rem;
+            color: var(--color-text-dim);
+        }
+
+        .lang-link.active {
+            color: var(--color-accent-primary);
+            font-weight: 600;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--color-accent-primary);
+            color: var(--color-ground);
+            border: none;
+            border-radius: 0.4rem;
+            font-weight: 600;
+            font-family: var(--type-body-family);
+            cursor: pointer;
+            display: inline-block;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: var(--color-accent-warm);
+            color: var(--color-ground);
+        }
+
+        /* Hero */
+        .hero {
+            padding: var(--spacing-xl) 0;
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+
+        .hero-text {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            margin: var(--spacing-md) 0;
+            color: var(--color-text-primary);
+        }
+
+        .hero h1 span {
+            color: var(--color-accent-primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--color-text-secondary);
+            max-width: 600px;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        .hero-image {
+            display: none;
+        }
+
+        /* Sections */
+        section {
+            padding: var(--spacing-xl) 0;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .section-title {
+            margin: var(--spacing-md) 0;
+            max-width: 700px;
+        }
+
+        .section-title span {
+            color: var(--color-accent-primary);
+        }
+
+        /* Understanding Section */
+        .understanding {
+            background: var(--color-card-bg);
+        }
+
+        .understanding-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+
+        .card {
+            padding: var(--spacing-md);
+            background: var(--color-ground);
+            border: 1px solid var(--color-border);
+            border-radius: 0.6rem;
+            transition: border-color 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--color-accent-primary);
+        }
+
+        .card-label {
+            display: block;
+            font-size: var(--type-caption-size);
+            color: var(--color-accent-primary);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            font-family: var(--type-body-family);
+        }
+
+        .card h3 {
+            margin-bottom: 0.8rem;
+        }
+
+        .card p {
+            color: var(--color-text-secondary);
+            margin-bottom: 0;
+        }
+
+        /* Partnership Section */
+        .partnership {
+            background: var(--color-card-bg);
+        }
+
+        .partnership-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+
+        .partnership-item {
+            padding: var(--spacing-md);
+            border-left: 4px solid var(--color-accent-primary);
+            background: var(--color-ground);
+        }
+
+        .partnership-item h3 {
+            margin-bottom: 0.8rem;
+            color: var(--color-text-primary);
+        }
+
+        .partnership-item p {
+            color: var(--color-text-secondary);
+            margin-bottom: 0;
+        }
+
+        /* Principles Section */
+        .principles {
+            background: transparent;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+
+        .principle {
+            padding: var(--spacing-md);
+            border-top: 2px solid var(--color-accent-primary);
+            background: var(--color-card-bg);
+        }
+
+        .principle h4 {
+            font-family: var(--type-body-family);
+            font-size: var(--type-h3-size);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: var(--color-accent-primary);
+        }
+
+        .principle p {
+            color: var(--color-text-secondary);
+            margin-bottom: 0;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .cta-section p {
+            font-size: 1.15rem;
+            color: var(--color-text-secondary);
+            max-width: 600px;
+            margin: 0 auto var(--spacing-lg);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--color-border);
+            padding: var(--spacing-xl) 0;
+            background: var(--color-card-bg);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .footer-brand h2 {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-brand p {
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+            max-width: 300px;
+            margin-bottom: 0;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        .footer-links a {
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .footer-bottom {
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid var(--color-border);
+            font-size: 0.85rem;
+            color: var(--color-text-dim);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .understanding-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .partnership-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                flex-wrap: nowrap;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--color-accent-primary);
+            outline-offset: 2px;
+        }
+    </style>
 </head>
-
 <body>
-
-    <div class="atmosphere"></div>
 
     <nav class="container">
         <div class="logo">MePlann</div>
-        <div class="nav-links" style="display: flex; align-items: center;">
+        <div class="nav-links">
             <div class="lang-switcher">
                 <a href="index.html" class="lang-link active">EN</a>
                 <a href="vi/index.html" class="lang-link">VI</a>
             </div>
             <a href="mailto:support@meplann.com" class="nav-link">Support</a>
-            <a href="https://app.meplann.com" class="btn" style="padding: 10px 24px; font-size: 0.9rem;">Open
-                MePlann</a>
+            <a href="https://app.meplann.com" class="btn">Open MePlann</a>
         </div>
     </nav>
 
-    <header class="hero container">
-        <div class="hero-grid">
-            <div class="hero-text">
-                <span class="section-label" style="text-align: left;">For people who overthink everything</span>
-                <h1>Plan around your <span>energy,</span> not against it.</h1>
-                <p>Say no to to-do lists that expect you to be a machine every single day. 
-                    MePlann is the app that 'reads' your energy. 
-                    Feeling sluggish? We queue up the easy wins. 
-                    In the zone? We bring on the heavy lifting. 
-                    Ditch the exhausting time management systems—it’s time to work with your flow, not against it. Meet MePlann.</p>
-                <div class="hero-actions">
-                    <a href="https://app.meplann.com" class="btn">Start planning</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="phone-mockup">
-                    <div class="device-frame">
-                        <img src="assets/app_preview.png" alt="MePlann App Interface">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Personality Section -->
-    <section class="personality container">
-        <span class="section-label">How it behaves</span>
-        <h2 class="section-title">Practical when you need a plan,<br>gentle when you need a break</h2>
-
-        <div class="feature-cards">
-            <div class="card">
-                <span class="card-icon">🫂</span>
-                <h3>It learns how you work</h3>
-                <p>A short self-discovery profile tells MePlann whether you think in structure or in bursts of
-                    ideas — and it plans differently depending on which one you are.</p>
-            </div>
-
-            <div class="card">
-                <span class="card-icon">🧠</span>
-                <h3>Reframes, not pep talks</h3>
-                <p>When you're stuck or overloaded, it doesn't just tell you to "push through." It breaks the
-                    problem into a smaller, actually doable next step.</p>
-            </div>
-
-            <div class="card">
-                <span class="card-icon">🕊️</span>
-                <h3>No guilt for resting</h3>
-                <p>An unfinished list isn't treated as failure. If you're overloaded, MePlann quietly cuts down
-                    what it shows you instead of piling on more.</p>
+    <!-- Hero / Thesis -->
+    <section class="hero container">
+        <div class="hero-text">
+            <span class="section-label">A new way to execute</span>
+            <h1>I understand you.<br>Let's execute together.</h1>
+            <p>MePlann isn't a task manager that pushes you to do more. It's an AI partner that knows your patterns, anticipates what you need, and helps you execute your strategy with clarity and confidence. Every day, every decision, we get smarter about how you work best.</p>
+            <div class="hero-actions">
+                <a href="https://app.meplann.com" class="btn">Begin the partnership</a>
             </div>
         </div>
     </section>
 
-    <!-- Spirit Section -->
-    <section class="spirit">
-        <div class="container">
-            <span class="section-label">What makes it different</span>
-            <h2 class="section-title">Built to fit <span>you,</span> not the other way around</h2>
-
-            <div class="spirit-grid">
-                <div class="spirit-item">
-                    <div class="spirit-content">
-                        <h3>Skip the system that never worked</h3>
-                        <p>You've probably tried Pomodoro, GTD, bullet journaling. MePlann doesn't ask you to
-                            adopt one more method — it adjusts its own suggestions to how your brain runs.</p>
-                    </div>
-                </div>
-
-                <div class="spirit-item">
-                    <div class="spirit-content">
-                        <h3>Room to think before you plan</h3>
-                        <p>A quick tarot pull or a five-minute brain dump, sitting right next to your task board —
-                            because clearing your head usually comes before clearing your list.</p>
-                    </div>
-                </div>
-
-                <div class="spirit-item">
-                    <div class="spirit-content">
-                        <h3>Your data stays yours</h3>
-                        <p>Everything is stored locally first. Cloud backup is there if you want it, never
-                            required — your unfiltered thoughts don't need to leave your device.</p>
-                    </div>
-                </div>
+    <!-- Understanding Section -->
+    <section class="understanding container">
+        <span class="section-label">How we understand you</span>
+        <h2 class="section-title">Deep patterns, not surface habits</h2>
+        <div class="understanding-cards">
+            <div class="card">
+                <span class="card-label">Learns your mind</span>
+                <h3>Knows what you need before you do</h3>
+                <p>A quick discovery tells me your thinking style—whether you plan weeks ahead or live in the moment. I use that to shape every suggestion, every reminder, every reframe to fit how you actually think.</p>
+            </div>
+            <div class="card">
+                <span class="card-label">Reads the room</span>
+                <h3>Matches your energy, not commands it</h3>
+                <p>Your energy shifts throughout the day. Instead of pretending everyone peaks at 9 AM, I adjust what I show you. Feeling scattered? Smaller, easier wins. In flow? Bring on the complex work.</p>
+            </div>
+            <div class="card">
+                <span class="card-label">Anticipates needs</span>
+                <h3>One step ahead, never pushy</h3>
+                <p>I track what actually works for you, then gently suggest it before you ask. When you're overwhelmed, I quietly pare down what matters most. When you're ready to push, I help you aim higher.</p>
             </div>
         </div>
     </section>
 
-    <!-- Mission Section -->
-    <section class="mission container">
-        <div class="mission-box">
-            <span class="section-label">Why we're building this</span>
-            <h2>Plan the day. Understand the pattern.</h2>
-            <p>Standard productivity tools just push for maximum output. We’re asking 
-                a better question: why is a task effortless on Monday but completely overwhelming 
-                by Thursday? MePlann is built to help you discover those hidden patterns 
-                in your energy, one day at a time.</p>
+    <!-- Partnership Section -->
+    <section class="partnership container">
+        <span class="section-label">What partnership looks like</span>
+        <h2 class="section-title">Strategy, not management</h2>
+        <div class="partnership-grid">
+            <div class="partnership-item">
+                <h3>Reframe, don't rescue</h3>
+                <p>When you're stuck, I don't tell you to "just push through." I break the problem down with you, find the one next step that's actually doable, and help you see what you couldn't see alone.</p>
+            </div>
+            <div class="partnership-item">
+                <h3>Your data stays yours</h3>
+                <p>Everything lives on your device first. Cloud backup is optional, never required. Your unfiltered thoughts, your patterns, your strategy—they never leave unless you choose.</p>
+            </div>
+            <div class="partnership-item">
+                <h3>Resting is part of the plan</h3>
+                <p>A good strategist knows when to push and when to hold steady. If you're overloaded, I don't pile on more. I help you see what can wait, what actually matters right now.</p>
+            </div>
+            <div class="partnership-item">
+                <h3>Learn from experience</h3>
+                <p>Every day adds to what I know about you. Why does Tuesday always feel harder? When do you actually do your best thinking? I notice patterns you might miss, so we both get smarter.</p>
+            </div>
         </div>
     </section>
 
+    <!-- Principles Section -->
+    <section class="principles container">
+        <span class="section-label">Built on real understanding</span>
+        <h2 class="section-title">Why this works differently</h2>
+        <div class="principles-grid">
+            <div class="principle">
+                <h4>No one-size-fits-all</h4>
+                <p>You're not GTD or Pomodoro. You're you. MePlann doesn't ask you to adopt someone else's system—it learns yours and gets better at it every single day.</p>
+            </div>
+            <div class="principle">
+                <h4>Strategy before tactics</h4>
+                <p>Most planners jump straight to the task list. We start with understanding: what actually matters? What patterns are holding you back? Then tactics make sense.</p>
+            </div>
+            <div class="principle">
+                <h4>Clarity through conversation</h4>
+                <p>Chat with me about what's on your mind. Brain dump your half-formed ideas. Pull a tarot card when you need perspective. The app adapts to however you think best.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section container">
+        <h2>Ready to work with a partner who gets you?</h2>
+        <p>MePlann learns how you work, anticipates what you need, and helps you execute with confidence. Start free, no credit card required.</p>
+        <div class="cta-buttons">
+            <a href="https://app.meplann.com" class="btn">Begin the partnership</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
                     <h2 class="logo">MePlann</h2>
-                    <p style="color: var(--text-dim); margin-top: 12px; max-width: 300px;">A planning app for
-                        people whose minds don't run on autopilot.</p>
+                    <p>An AI partner that understands you deeply and helps you execute your strategy with clarity.</p>
                 </div>
                 <div class="footer-links">
                     <a href="privacy.html">Privacy</a>
                     <a href="terms.html">Terms</a>
                     <a href="support.html">Support</a>
-                    <a href="mailto:support@meplann.com">Email Us</a>
+                    <a href="mailto:support@meplann.com">Email us</a>
                 </div>
             </div>
-            <div
-                style="margin-top: 60px; font-size: 0.8rem; color: var(--text-dim); border-top: 1px solid var(--border); padding-top: 40px; display: flex; justify-content: space-between;">
+            <div class="footer-bottom">
                 <span>© 2026 MePlann.</span>
                 <span>By Silverbot</span>
             </div>
@@ -163,5 +592,4 @@
     </footer>
 
 </body>
-
 </html>
