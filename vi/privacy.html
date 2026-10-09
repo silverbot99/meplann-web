@@ -4,124 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chính Sách Bảo Mật | MePlann</title>
-    <link rel="stylesheet" href="../style.css">
-    <style>
-        .doc-content {
-            padding: 100px 0;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .doc-content h1 {
-            margin-bottom: 40px;
-        }
-
-        .doc-content h2 {
-            margin-top: 40px;
-            margin-bottom: 20px;
-            color: var(--accent-gold);
-        }
-
-        .doc-content p {
-            margin-bottom: 20px;
-            color: var(--text-dim);
-        }
-
-        .doc-content ul {
-            margin-left: 20px;
-            margin-bottom: 20px;
-            color: var(--text-dim);
-        }
-
-        .doc-content li {
-            margin-bottom: 10px;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 40px;
-            color: var(--accent-glow);
-            text-decoration: none;
-            font-weight: 600;
-        }
-    </style>
+    <title>Chính sách quyền riêng tư | MePlann</title>
+    <meta name="description" content="MePlann giữ gì trên điện thoại của bạn, gửi gì lên máy chủ và OpenAI, và cách xoá dữ liệu.">
+    <link rel="stylesheet" href="../legal.css">
 </head>
 
 <body>
-    <section class="container doc-content">
-        <a href="index.html" class="back-link">← Quay lại trang chủ</a>
-        <h1>Chính Sách Bảo Mật</h1>
-        <p><strong>Cập nhật lần cuối: Ngày 2 tháng 9 năm 2026</strong></p>
+    <header class="legal-nav">
+        <a href="index.html" class="legal-brand">MePlann</a>
+        <nav class="legal-links" aria-label="Ngôn ngữ">
+            <a href="../privacy.html" lang="en">EN</a>
+            <a href="privacy.html" class="active" lang="vi">VI</a>
+        </nav>
+    </header>
 
-        <p>MePlann giữ dữ liệu của bạn ngay trên máy. Chính sách này nói rõ những gì ở lại máy, và vài trường hợp hiếm hoi
-            có dữ liệu đi ra ngoài.</p>
+    <main class="legal">
+        <p class="legal-eyebrow">Chính sách quyền riêng tư</p>
+        <h1>Kế hoạch của bạn nằm trên điện thoại của bạn.</h1>
+        <p class="legal-updated">Cập nhật lần cuối: 9 tháng 10, 2026 · Áp dụng cho ứng dụng MePlann trên iOS, phiên bản 1.0 trở đi</p>
 
-        <h2>1. Thu Thập & Sử Dụng Dữ Liệu</h2>
-        <ul>
-            <li><strong>Thông Tin Cá Nhân:</strong> MePlann lưu hồ sơ, bảng, nhiệm vụ, ghi chú, nhật ký và lịch sử trò
-                chuyện <strong>trên thiết bị của bạn</strong>, qua Core Data và UserDefaults của Apple. Không có tài
-                khoản MePlann và không có bản sao nào của dữ liệu này trên máy chủ.</li>
-            <li><strong>Thông Báo:</strong> Nếu bạn cho phép thông báo, thiết bị sẽ đăng ký với dịch vụ đẩy của Apple.
-                Chúng tôi không gửi thông báo từ máy chủ của mình; các lời nhắc được hẹn ngay trên máy bạn.</li>
-            <li><strong>Thanh Toán:</strong> Gói đăng ký do Apple StoreKit xử lý. Chúng tôi không bao giờ thấy thông tin
-                thẻ của bạn.</li>
-        </ul>
-        <p>Hai tính năng tuỳ chọn có gửi dữ liệu ra ngoài, và chỉ khi bạn tự bật: kết nối tài khoản Google (mục 2) và
-            các tính năng AI (mục 3).</p>
+        <aside class="legal-summary" aria-label="Tóm tắt">
+            <h2>Tóm tắt</h2>
+            <ul>
+                <li>Board, task, ghi chú, nhật ký, trò chuyện và chân dung bản thân được lưu <strong>trên máy của bạn</strong>.</li>
+                <li>Dùng board và Planner không cần tài khoản. Các tính năng AI cần một tài khoản miễn phí (email và mật khẩu).</li>
+                <li>Khi bạn dùng một tính năng AI, nội dung bạn viết cho nó được gửi qua máy chủ của chúng tôi tới <strong>OpenAI</strong>. Ứng dụng hỏi ý bạn trước lần đầu.</li>
+                <li>Chúng tôi không bán dữ liệu, không hiện quảng cáo và không theo dõi bạn qua các ứng dụng khác.</li>
+                <li>Bạn có thể xoá tài khoản ngay trong ứng dụng: Me → Cài đặt → Xoá tài khoản.</li>
+            </ul>
+        </aside>
 
-        <h2>2. Chính Sách Dữ Liệu Người Dùng Google</h2>
-        <p>Việc MePlann sử dụng và chuyển giao thông tin nhận được từ Google API cho bất kỳ ứng dụng nào khác sẽ tuân
-            thủ <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Chính Sách
-                Dữ Liệu Người Dùng Dịch Vụ Google API</a>, bao gồm các yêu cầu về Sử dụng Hạn chế (Limited Use).</p>
-        <p>Kết nối tài khoản Google hoàn toàn là tuỳ chọn. MePlann hoạt động đầy đủ mà không cần nó.</p>
-        <ul>
-            <li><strong>Google Calendar (<code>calendar.events</code>):</strong> Chỉ ghi. Khi bạn bấm "Thêm vào lịch" ở
-                một nhiệm vụ, MePlann tạo sự kiện trên lịch chính của bạn. <strong>MePlann không thể đọc lịch của
-                    bạn</strong> — ứng dụng không hề tải về, liệt kê hay hiển thị các sự kiện sẵn có.</li>
-            <li><strong>Google Drive (<code>drive.file</code>):</strong> Dùng để sao lưu tuỳ chọn. Khi bạn bấm "Sao lưu
-                ngay", MePlann ghi một tệp duy nhất <code>meplann_backup.json</code> vào Drive của chính bạn. Tệp này
-                chứa bảng, nhiệm vụ, ghi chú, lịch sử trò chuyện, braindump và ảnh đính kèm. Nếu bạn đã kết nối Drive,
-                ảnh bạn đính vào thẻ cũng được tải lên để đồng bộ giữa các thiết bị. Phạm vi này chỉ cho phép MePlann
-                thấy tệp do chính nó tạo — không đọc được phần còn lại trong Drive của bạn.</li>
-            <li><strong>Chia sẻ Dữ liệu:</strong> Chúng tôi không chia sẻ dữ liệu người dùng Google với bất kỳ bên thứ
-                ba nào. Dữ liệu không bao giờ được bán hay dùng cho quảng cáo.</li>
-            <li><strong>Lưu trữ &amp; Bảo mật:</strong> Dữ liệu Google chỉ đi giữa thiết bị của bạn và tài khoản Google
-                của chính bạn. <strong>Chúng tôi không lưu dữ liệu Google của bạn trên máy chủ của mình.</strong></li>
-            <li><strong>Lưu giữ &amp; Xóa dữ liệu:</strong> Tệp sao lưu nằm trong Drive của bạn và ở đó cho tới khi bạn
-                xoá — đăng xuất khỏi MePlann không xoá nó. Bạn có thể thu hồi quyền truy cập bất cứ lúc nào trong <a
-                    href="https://myaccount.google.com/permissions" target="_blank">phần quyền của tài khoản
-                    Google</a>, và xoá tệp sao lưu trực tiếp trong Drive.</li>
-        </ul>
+        <section>
+            <h2 id="device">1. Những gì ở lại trên máy</h2>
+            <p>MePlann chỉ lưu những thứ sau trên iPhone của bạn, trong vùng lưu trữ riêng của ứng dụng (Core Data và cài đặt ứng dụng):</p>
+            <ul>
+                <li>Board, thẻ, phần (section) và mọi thứ bạn lưu vào: link, video YouTube, hình ảnh, ghi chú, file Markdown và PDF.</li>
+                <li>Nhóm, danh sách, task, bước, lời nhắc và lịch sử của task trong Planner.</li>
+                <li>My Day, nhật ký board và Vừa xoá (mục trong đó tự xoá sau 7 ngày).</li>
+                <li>Lịch sử trò chuyện với AI, các lần Thả ra, Reframe và trải bài Tarot.</li>
+                <li>Chân dung bản thân, kết quả bài test (phong cách làm việc, kiểu tập trung, Đa trí tuệ, kiểm tra mức tải) và điểm mức tải.</li>
+            </ul>
+            <p>Lời nhắc do iOS hẹn giờ ngay trên máy. Nếu bạn bật mật mã hoặc khoá Face ID, iOS là bên kiểm tra. MePlann không bao giờ thấy dữ liệu Face ID của bạn.</p>
+            <p>Những thứ bạn chia sẻ vào MePlann từ ứng dụng khác (qua bảng Chia sẻ của iOS) được chép vào một vùng lưu trữ mà chỉ MePlann và tiện ích chia sẻ của nó đọc được, rồi thêm vào My Day.</p>
+        </section>
 
-        <h2>3. AI & Xử Lý Dữ Liệu</h2>
-        <ul>
-            <li><strong>Tính năng AI:</strong> MePlann gửi dữ liệu tới <strong>OpenAI API</strong> cho: trò chuyện, bói
-                Tarot, gỡ rối suy nghĩ, phân tích BrainFlow, gợi ý chia nhỏ nhiệm vụ, sắp xếp ưu tiên, nhận diện nhiệm
-                vụ, tạo thẻ nội dung, và câu chữ của các thông báo nhắc việc.</li>
-            <li><strong>Truyền dữ liệu:</strong> Nội dung bạn nhập được gửi đi, kèm ngữ cảnh giúp trợ lý trả lời hữu
-                ích hơn: hồ sơ phong cách làm việc, kết quả bài Đa Trí Tuệ, mức khối lượng công việc, lịch sử cuộc trò
-                chuyện hiện tại, và — khi bạn @-nhắc tới một bảng hay một ngày — các nhiệm vụ, thẻ mà bạn nhắc tới.</li>
-            <li><strong>Yêu cầu bạn không chủ động tạo:</strong> Để soạn câu chữ cho các lời nhắc đã hẹn, MePlann thực
-                hiện một vài yêu cầu AI chạy nền, trong đó có mức khối lượng công việc và số nhiệm vụ đang chờ hoặc quá
-                hạn. Bạn có thể dừng việc này bằng cách tắt thông báo cho MePlann.</li>
-            <li><strong>Quyền riêng tư:</strong> Theo chính sách sử dụng dữ liệu API của OpenAI, dữ liệu gửi qua API
-                không được dùng để huấn luyện mô hình của họ; OpenAI có thể lưu giữ trong một thời gian giới hạn để
-                giám sát lạm dụng. Các cuộc trò chuyện của bạn được lưu trên máy bạn, không nằm trên máy chủ của
-                MePlann.</li>
-        </ul>
+        <section>
+            <h2 id="account">2. Tài khoản MePlann</h2>
+            <p>Tài khoản là tuỳ chọn. Bạn chỉ cần nó để dùng AI và để đồng bộ kế hoạch với ứng dụng web MePlann. Khi bạn tạo tài khoản, máy chủ của chúng tôi lưu:</p>
+            <ul>
+                <li><strong>Email và tên</strong>, để đăng nhập và liên hệ với bạn về tài khoản.</li>
+                <li><strong>Mật khẩu</strong>, chỉ lưu dạng băm một chiều (bcrypt). Chúng tôi không đọc được.</li>
+                <li><strong>Gói và số Energy AI</strong>: gói đăng ký, số Energy còn lại, và lịch sử các gói Energy đã mua.</li>
+                <li><strong>Số lần dùng AI</strong>: theo ngày và theo tính năng, số yêu cầu và số token đã dùng. Chúng tôi đếm số lần dùng, không lưu nội dung bạn viết.</li>
+                <li><strong>Mã thông báo đẩy</strong>, nếu bạn cho phép thông báo khi đã đăng nhập, để gửi tin về tài khoản và sản phẩm.</li>
+            </ul>
+            <p><strong>Đồng bộ web (mặc định tắt).</strong> Nếu bạn bật Cloud Sync trong Cài đặt, những board và task được đồng bộ sẽ lưu trên máy chủ để hiện trong ứng dụng web MePlann. Khi tắt, không có gì được đồng bộ.</p>
+            <p><strong>Danh sách chia sẻ.</strong> Khi bạn tạo link chia sẻ cho một danh sách task, một bản sao của danh sách đó (tiêu đề, ghi chú, các bước và trạng thái) được lưu trên máy chủ để ai có link cũng mở được.</p>
+        </section>
 
-        <h2>4. Xóa dữ liệu của bạn</h2>
-        <p>Vì dữ liệu nằm trên máy bạn, <strong>xoá ứng dụng là xoá toàn bộ dữ liệu</strong> — không có tài khoản nào
-            phải đóng và không còn gì của bạn ở phía chúng tôi.</p>
-        <p>Nếu bạn đã kết nối Google: thu hồi quyền của MePlann trong <a
-                href="https://myaccount.google.com/permissions" target="_blank">phần quyền của tài khoản Google</a>, và
-            xoá tệp <code>meplann_backup.json</code> khỏi Drive nếu bạn từng sao lưu. Các sự kiện MePlann đã tạo vẫn nằm
-            trong lịch cho tới khi bạn tự xoá.</p>
+        <section>
+            <h2 id="ai">3. Tính năng AI và OpenAI</h2>
+            <p>Các tính năng AI của MePlann gồm Chat, Thả ra, Reframe, Tarot, BrainFlow, gợi ý task và câu chữ của một số lời nhắc. Trước yêu cầu AI đầu tiên, ứng dụng xin phép bạn. Nếu bạn từ chối, không có gì được gửi đi và mọi phần khác của MePlann vẫn hoạt động.</p>
+            <p>Khi bạn dùng một tính năng AI, ứng dụng gửi những thứ sau tới máy chủ của chúng tôi, rồi máy chủ chuyển tiếp tới <strong>OpenAI API</strong> để tạo câu trả lời:</p>
+            <ul>
+                <li>Nội dung bạn viết cho tính năng đó. Với Chat, gồm cả các tin nhắn gần đây trong cuộc trò chuyện.</li>
+                <li>Ngữ cảnh để câu trả lời hợp với bạn: chân dung bản thân, kết quả bài test và mức tải.</li>
+                <li>Task hoặc thẻ bạn nhắc tới bằng @ trong Chat, hoặc task bạn nhờ chia thành các bước.</li>
+            </ul>
+            <p>Máy chủ chỉ chuyển tiếp yêu cầu và giữ lại số lần dùng như ở mục 2. Máy chủ không lưu tin nhắn của bạn hay câu trả lời của AI. Theo điều khoản API của OpenAI, dữ liệu gửi qua API không được dùng để huấn luyện mô hình. OpenAI có thể giữ tối đa 30 ngày để giám sát lạm dụng, sau đó xoá.</p>
+            <p><strong>Yêu cầu bạn không tự bắt đầu.</strong> Để soạn câu chữ cho một số lời nhắc, ứng dụng có thể gửi một yêu cầu ngắn chạy nền, kèm điểm mức tải và số task đang chờ hoặc quá hạn. Tắt thông báo của MePlann để dừng việc này.</p>
+            <p><strong>An toàn.</strong> Nếu nội dung bạn viết cho thấy bạn có thể đang gặp nguy hiểm, MePlann hiện các đường dây hỗ trợ khủng hoảng. Việc kiểm tra này chạy ngay trên máy.</p>
+        </section>
 
-        <h2>5. Liên Hệ</h2>
-        <p>Nếu bạn có thắc mắng, vui lòng liên hệ với chúng tôi tại <strong>support@meplann.com</strong>.</p>
-    </section>
+        <section>
+            <h2 id="google">4. Google Drive và Google Calendar</h2>
+            <p>Kết nối tài khoản Google là tuỳ chọn và tách biệt với tài khoản MePlann. Việc MePlann dùng thông tin nhận từ Google API tuân theo <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Chính sách dữ liệu người dùng của Google API Services</a>, bao gồm các yêu cầu Sử dụng hạn chế (Limited Use).</p>
+            <ul>
+                <li><strong>Google Drive (<code>drive.file</code>):</strong> để sao lưu. MePlann lưu các file sao lưu đã mã hoá (<code>.mplbk</code>, AES-256) vào thư mục <code>MePlann/Backups</code> trong Drive của chính bạn: khi bạn bấm sao lưu, hoặc tự động tối đa ba lần mỗi ngày nếu bạn để bật sao lưu tự động. Khoá mã hoá chỉ nằm trên máy bạn và trong Mã khôi phục. Nếu bạn bật, ảnh gốc, file Markdown và PDF cũng được tải lên thư mục <code>MePlann</code> trong Drive. Các file đính kèm này không được mã hoá. Quyền này chỉ cho MePlann thấy file do chính nó tạo, không đọc được phần còn lại trong Drive.</li>
+                <li><strong>Google Calendar (<code>calendar.events</code>):</strong> để thêm lời nhắc của task thành sự kiện khi bạn chọn nhắc qua Google Calendar. MePlann chỉ tạo, sửa và xoá những sự kiện do nó tạo, không đọc các sự kiện khác của bạn.</li>
+                <li>Dữ liệu Google chỉ đi giữa máy bạn và tài khoản Google của bạn, không qua máy chủ của chúng tôi, và không bao giờ bị bán, chia sẻ hay dùng cho quảng cáo.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 id="payments">5. Mua hàng</h2>
+            <p>Gói đăng ký (Pro, Pro+) và gói Energy do Apple bán qua App Store. Apple xử lý thanh toán, chúng tôi không bao giờ thấy thông tin thẻ của bạn. Để áp gói và Energy vào tài khoản, ứng dụng gửi các bản ghi giao dịch có chữ ký của Apple lên máy chủ của chúng tôi.</p>
+        </section>
+
+        <section>
+            <h2 id="sharing">6. Những bên khác nhận dữ liệu</h2>
+            <div class="legal-table-wrap">
+                <table class="legal-table">
+                    <thead>
+                        <tr><th scope="col">Dịch vụ</th><th scope="col">Nhận được gì</th><th scope="col">Để làm gì</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>OpenAI</td><td>Nội dung và ngữ cảnh từ tính năng AI (mục 3)</td><td>Tạo câu trả lời AI</td></tr>
+                        <tr><td>Apple</td><td>Giao dịch mua, mã thông báo đẩy</td><td>Thanh toán, thông báo</td></tr>
+                        <tr><td>Google</td><td>Chỉ những gì bạn sao lưu hoặc thêm vào lịch</td><td>Bản sao lưu và sự kiện của bạn</td></tr>
+                        <tr><td>Nhà cung cấp máy chủ</td><td>Dữ liệu tài khoản ở mục 2</td><td>Vận hành máy chủ MePlann</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Chúng tôi không dùng SDK quảng cáo hay phân tích, và không theo dõi bạn trên ứng dụng hay website của công ty khác.</p>
+        </section>
+
+        <section>
+            <h2 id="delete">7. Xoá dữ liệu</h2>
+            <ul>
+                <li><strong>Tài khoản:</strong> trong ứng dụng, vào Me → Cài đặt → Xoá tài khoản. Thao tác này xoá vĩnh viễn tài khoản, board và task đã đồng bộ, số lần dùng AI, số Energy và mã thông báo đẩy khỏi máy chủ. Sau đó ứng dụng hỏi bạn muốn giữ hay xoá dữ liệu trên máy.</li>
+                <li><strong>Dữ liệu trên máy:</strong> xoá trong bước xoá tài khoản, hoặc xoá ứng dụng.</li>
+                <li><strong>Google:</strong> xoá thư mục <code>MePlann</code> trong Drive và thu hồi quyền trong <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">phần quyền của tài khoản Google</a>. Sự kiện MePlann đã tạo vẫn nằm trong lịch cho tới khi bạn tự xoá.</li>
+                <li><strong>Gói đăng ký</strong> không tự huỷ khi xoá tài khoản. Hãy huỷ trong Cài đặt iOS → Apple ID → Đăng ký.</li>
+            </ul>
+            <p>Bạn cũng có thể email cho chúng tôi để xin bản sao dữ liệu tài khoản hoặc yêu cầu xoá. Chúng tôi phản hồi trong vòng 30 ngày.</p>
+        </section>
+
+        <section>
+            <h2 id="security">8. Bảo mật và thời gian lưu giữ</h2>
+            <p>Kết nối giữa ứng dụng và máy chủ dùng HTTPS. Chúng tôi giữ dữ liệu tài khoản khi tài khoản còn tồn tại và xoá khi bạn xoá tài khoản. Link danh sách chia sẻ không gắn với tài khoản, nên xoá tài khoản không xoá chúng. Hãy email kèm link, chúng tôi sẽ xoá.</p>
+        </section>
+
+        <section>
+            <h2 id="children">9. Trẻ em</h2>
+            <p>MePlann không dành cho trẻ dưới 13 tuổi, và chúng tôi không cố ý thu thập dữ liệu cá nhân của trẻ. Nếu bạn nghĩ một em nhỏ đã tạo tài khoản, hãy liên hệ để chúng tôi xoá.</p>
+        </section>
+
+        <section>
+            <h2 id="changes">10. Thay đổi</h2>
+            <p>Nếu chúng tôi thay đổi những gì thu thập hoặc ai nhận dữ liệu, trang này và ngày cập nhật ở trên sẽ được sửa. Với thay đổi lớn, chúng tôi cũng báo trong ứng dụng.</p>
+        </section>
+
+        <section>
+            <h2 id="contact">11. Liên hệ</h2>
+            <p>Câu hỏi hoặc yêu cầu: <a href="mailto:support@meplann.com">support@meplann.com</a>. MePlann do Silverbot phát triển.</p>
+        </section>
+    </main>
+
+    <footer class="legal-footer">
+        <span>© 2026 MePlann · Silverbot</span>
+        <span class="legal-footer-links">
+            <a href="index.html">Trang chủ</a>
+            <a href="terms.html">Điều khoản</a>
+            <a href="support.html">Hỗ trợ</a>
+        </span>
+    </footer>
 </body>
 
 </html>

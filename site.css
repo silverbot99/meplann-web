@@ -1,0 +1,250 @@
+/* MePlann landing — layout: cột hẹp cho chữ, ảnh app đặt lệch như những tấm thẻ trên board.
+   Một điểm nhấn duy nhất: dải "Just One Thing" ở giữa trang. */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+    --bg: #FBFAFF;          /* nền lavender rất nhạt */
+    --surface: #FFFFFF;
+    --ink: #2B1C50;         /* chữ chính, tím đậm */
+    --muted: #5C527F;
+    --dim: #8A8496;
+    --accent: #7E60DF;      /* tím MePlann */
+    --blush: #FF94D1;       /* hồng phụ, chỉ dùng trong gradient logo */
+    --soft: #EDE8FF;
+    --line: #E6E0F5;
+    --on-accent: #FFFFFF;
+    --display: "Crimson Text", Georgia, "Times New Roman", serif;
+    --body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --wrap: 68rem;
+    color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg: #17131F;
+        --surface: #211A2E;
+        --ink: #F0E8FF;
+        --muted: #CFC4E4;
+        --dim: #9B8FB5;
+        --accent: #B9A2FF;
+        --blush: #F2A6D3;
+        --soft: #2E2445;
+        --line: #352A4D;
+        --on-accent: #17131F;
+        color-scheme: dark;
+    }
+}
+
+:root[data-theme="dark"] {
+    --bg: #17131F;
+    --surface: #211A2E;
+    --ink: #F0E8FF;
+    --muted: #CFC4E4;
+    --dim: #9B8FB5;
+    --accent: #B9A2FF;
+    --blush: #F2A6D3;
+    --soft: #2E2445;
+    --line: #352A4D;
+    --on-accent: #17131F;
+    color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--accent); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-inline: max(1rem, 4vw); }
+
+h1, h2, h3 { font-family: var(--display); line-height: 1.12; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); font-weight: 700; letter-spacing: -0.01em; }
+h2 { font-size: clamp(1.9rem, 4.5vw, 2.8rem); font-weight: 700; }
+h3 { font-size: 1.45rem; font-weight: 600; }
+p { margin: 0; }
+
+.eyebrow {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+/* ---------- Nav ---------- */
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: color-mix(in srgb, var(--bg) 86%, transparent);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+}
+.site-nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.85rem; }
+.brand { display: flex; align-items: center; gap: 0.55rem; font-family: var(--display); font-weight: 700; font-size: 1.45rem; color: var(--ink); text-decoration: none; }
+.brand-mark { width: 30px; height: 30px; border-radius: 8px; }
+.nav-right { display: flex; align-items: center; gap: 1.1rem; font-size: 0.92rem; }
+.nav-right a { color: var(--muted); text-decoration: none; }
+.nav-right a:hover { color: var(--accent); }
+.lang a { color: var(--dim); font-size: 0.85rem; }
+.lang a + a { margin-left: 0.6rem; }
+.lang a.active { color: var(--accent); font-weight: 600; }
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.35rem;
+    border-radius: 999px;
+    background: var(--ink);
+    color: var(--bg);
+    font-weight: 600;
+    font-size: 0.98rem;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+.btn:hover { transform: translateY(-1px); color: var(--bg); }
+.btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.btn-ghost:hover { color: var(--accent); border-color: var(--accent); }
+.nav-right .btn { padding: 0.5rem 1rem; font-size: 0.88rem; color: var(--bg); }
+
+/* ---------- Hero ---------- */
+.hero { padding-block: clamp(3rem, 8vw, 6rem) clamp(2.5rem, 6vw, 4.5rem); }
+.hero .wrap { display: grid; gap: 3rem; align-items: center; }
+.hero-copy { display: grid; gap: 1.4rem; max-width: 36rem; }
+.hero h1 em { font-style: italic; color: var(--accent); }
+.hero-lede { font-size: 1.2rem; color: var(--muted); max-width: 32rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+.hero-note { font-size: 0.88rem; color: var(--dim); }
+
+/* Hai ảnh app chồng lệch nhau như thẻ ghim trên board */
+/* Chiều cao theo bề rộng: ảnh app cao ~2,17 lần bề rộng, chiếm 56% khung, cộng phần lệch. */
+.hero-shots { position: relative; aspect-ratio: 10 / 13.6; max-width: 30rem; width: 100%; justify-self: center; }
+.phone {
+    position: absolute;
+    width: 56%;
+    border-radius: 26px;
+    border: 1px solid var(--line);
+    box-shadow: 0 24px 60px -24px rgba(43, 28, 80, 0.35);
+    background: var(--surface);
+    overflow: hidden;
+}
+.phone img { width: 100%; height: auto; }
+.phone-back { left: 0; top: 2.5rem; transform: rotate(-4deg); }
+.phone-front { right: 0; top: 0; transform: rotate(3deg); }
+
+/* ---------- Flow: Gom → Làm → Nghỉ ---------- */
+.flow { padding-block: clamp(3rem, 7vw, 5rem); border-top: 1px solid var(--line); }
+.section-head { display: grid; gap: 0.75rem; max-width: 40rem; margin-bottom: 2.5rem; }
+.section-head p { color: var(--muted); font-size: 1.1rem; }
+.flow-grid { display: grid; gap: 1rem; }
+.flow-step {
+    display: grid;
+    gap: 0.6rem;
+    padding: 1.5rem;
+    border-radius: 18px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    min-width: 0;
+}
+.flow-step .tag { font-size: 0.8rem; font-weight: 600; color: var(--accent); letter-spacing: 0.04em; }
+.flow-step p { color: var(--muted); }
+.flow-step ul { margin: 0.25rem 0 0; padding-left: 1.1rem; color: var(--muted); font-size: 0.95rem; display: grid; gap: 0.3rem; }
+
+/* ---------- Just One Thing: điểm nhấn duy nhất ---------- */
+.one-thing { padding-block: clamp(3rem, 8vw, 5.5rem); background: var(--ink); color: var(--bg); }
+.one-thing .wrap { display: grid; gap: 2.5rem; align-items: center; }
+.one-thing .eyebrow { color: var(--blush); }
+.one-thing h2 { color: var(--bg); font-size: clamp(2.2rem, 6vw, 3.6rem); }
+.one-thing p { color: color-mix(in srgb, var(--bg) 78%, var(--ink)); font-size: 1.12rem; max-width: 34rem; }
+.one-thing-copy { display: grid; gap: 1.1rem; }
+.one-card {
+    justify-self: center;
+    width: min(100%, 22rem);
+    padding: 1.6rem;
+    border-radius: 22px;
+    background: var(--bg);
+    color: var(--ink);
+    display: grid;
+    gap: 1rem;
+    box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.5);
+}
+.one-card .label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.one-card .task { font-family: var(--display); font-size: 1.7rem; font-weight: 600; line-height: 1.2; }
+.one-card .steps { font-size: 0.9rem; color: var(--muted); }
+.one-card .actions { display: flex; gap: 0.5rem; }
+.one-card .actions span { flex: 1; text-align: center; padding: 0.65rem; border-radius: 12px; font-weight: 600; font-size: 0.9rem; }
+.one-card .done { background: var(--accent); color: var(--on-accent); }
+.one-card .skip { border: 1px solid var(--line); color: var(--muted); }
+
+/* ---------- Features ---------- */
+.features { padding-block: clamp(3rem, 7vw, 5rem); }
+.feature-list { display: grid; gap: 2.75rem; }
+.feature { display: grid; gap: 1.5rem; align-items: center; }
+.feature-copy { display: grid; gap: 0.8rem; max-width: 32rem; min-width: 0; }
+.feature-copy p { color: var(--muted); }
+.feature-shot { width: min(100%, 17rem); justify-self: center; border-radius: 24px; border: 1px solid var(--line); overflow: hidden; box-shadow: 0 20px 50px -28px rgba(43, 28, 80, 0.35); }
+.chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.3rem; }
+.chips span { font-size: 0.82rem; padding: 0.25rem 0.65rem; border-radius: 999px; background: var(--soft); color: var(--ink); }
+
+/* ---------- Privacy ---------- */
+.privacy-band { padding-block: clamp(3rem, 7vw, 4.5rem); border-top: 1px solid var(--line); }
+.privacy-grid { display: grid; gap: 1rem; }
+.privacy-item { padding: 1.25rem 0; border-top: 1px solid var(--line); display: grid; gap: 0.35rem; min-width: 0; }
+.privacy-item strong { font-weight: 600; }
+.privacy-item p { color: var(--muted); font-size: 0.97rem; }
+
+/* ---------- Pricing ---------- */
+.pricing { padding-block: clamp(3rem, 7vw, 5rem); border-top: 1px solid var(--line); }
+.plans { display: grid; gap: 1rem; }
+.plan { padding: 1.5rem; border-radius: 18px; border: 1px solid var(--line); background: var(--surface); display: grid; gap: 0.6rem; align-content: start; min-width: 0; }
+.plan.featured { border-color: var(--accent); }
+.plan .name { font-family: var(--display); font-size: 1.5rem; font-weight: 700; }
+.plan .price { font-size: 0.95rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.plan ul { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: 0.95rem; display: grid; gap: 0.35rem; }
+.pricing-note { margin-top: 1.25rem; font-size: 0.88rem; color: var(--dim); max-width: 46rem; }
+
+/* ---------- Closing + footer ---------- */
+.closing { padding-block: clamp(3.5rem, 8vw, 6rem); text-align: left; border-top: 1px solid var(--line); }
+.closing .wrap { display: grid; gap: 1.25rem; max-width: 46rem; margin-inline: auto; }
+.closing p { color: var(--muted); font-size: 1.1rem; }
+.care-note { font-size: 0.88rem; color: var(--dim); border-left: 2px solid var(--line); padding-left: 0.9rem; }
+
+.site-footer { border-top: 1px solid var(--line); padding-block: 2rem; font-size: 0.9rem; color: var(--dim); }
+.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 1.1rem; }
+.site-footer a { color: var(--muted); text-decoration: none; }
+.site-footer a:hover { color: var(--accent); }
+
+/* ---------- Responsive ---------- */
+@media (min-width: 820px) {
+    .hero .wrap { grid-template-columns: 1.1fr 0.9fr; }
+    .flow-grid { grid-template-columns: repeat(3, 1fr); }
+    .one-thing .wrap { grid-template-columns: 1.2fr 0.8fr; }
+    .feature { grid-template-columns: 1fr 1fr; }
+    .feature:nth-child(even) .feature-shot { order: -1; }
+    .privacy-grid { grid-template-columns: repeat(2, 1fr); column-gap: 2.5rem; }
+    .plans { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 520px) {
+    .nav-right .hide-sm { display: none; }
+    .hero-shots { max-width: 22rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+}

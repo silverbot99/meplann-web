@@ -5,90 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support | MePlann</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="meplann_app_icon_v2_1767283996672.png">
+    <meta name="description" content="Get help with MePlann: purchases, backups, sharing into the app, and deleting your data.">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="stylesheet" href="legal.css">
 </head>
 
 <body>
-
-    <div class="atmosphere"></div>
-
-    <nav class="container">
-        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">MePlann</a></div>
-        <div class="nav-links">
-            <a href="mailto:support@meplann.com" class="nav-link">Contact Us</a>
-        </div>
-    </nav>
-
-    <header class="hero container" style="min-height: 40vh; align-items: flex-start; padding-top: 80px;">
-        <div class="hero-text" style="max-width: 800px;">
-            <span class="section-label" style="text-align: left;">We're Here For You</span>
-            <h1>How can we <span>help?</span></h1>
-            <p>Whether you have a technical issue, a question about how to use MePlann, or just want to share your
-                experience, we are listening.</p>
-        </div>
+    <header class="legal-nav">
+        <a href="index.html" class="legal-brand">MePlann</a>
+        <nav class="legal-links" aria-label="Language">
+            <a href="support.html" class="active" lang="en">EN</a>
+            <a href="vi/support.html" lang="vi">VI</a>
+        </nav>
     </header>
 
-    <section class="container" style="padding: 40px 20px;">
-        <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">Contact Support</h2>
-        <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-dim); margin-bottom: 40px;">
-            The best way to reach us is via email. We aim to respond to all inquiries within 24-48 hours.
-            <br><br>
-            <strong>Email:</strong> <a href="mailto:support@meplann.com"
-                style="color: var(--accent);">support@meplann.com</a>
-        </p>
+    <main class="legal">
+        <p class="legal-eyebrow">Support</p>
+        <h1>How can we help?</h1>
+        <p class="legal-updated">Email <a href="mailto:support@meplann.com">support@meplann.com</a>. We usually reply within 1–2 days.</p>
 
-        <h2 class="section-title" style="text-align: left; margin-bottom: 30px; margin-top: 60px;">Frequently Asked
-            Questions</h2>
+        <aside class="legal-summary">
+            <h2>Guides inside the app</h2>
+            <p>Most how-tos are in the app: Me → Settings → Guides &amp; Tips. You'll find step-by-step guides for boards, sections, sharing, Gentle mode and more, with "Show me" tours on screen.</p>
+        </aside>
 
-        <div class="feature-cards" style="grid-template-columns: 1fr;">
-            <div class="card" style="align-items: flex-start; text-align: left;">
-                <h3>How do I restore my purchase?</h3>
-                <p>Go to the MePlann app > Profile Tab > Scroll down to "Subscription" and tap "Restore Purchase".</p>
-            </div>
+        <section>
+            <h2 id="restore">How do I restore my purchase?</h2>
+            <p>Open the plans screen (Me → Upgrade to Premium) and tap <strong>Restore Purchases</strong>. Use the same Apple ID you bought with.</p>
+        </section>
 
-            <div class="card" style="align-items: flex-start; text-align: left;">
-                <h3>Are my journals private?</h3>
-                <p>Yes. MePlann stores your journals on your device. There is no MePlann account and no copy on our
-                    servers, so we cannot read them. If you choose to connect Google Drive for backup, a copy goes to
-                    your own Drive — and only yours.</p>
-            </div>
+        <section>
+            <h2 id="cancel">How do I cancel or change my subscription?</h2>
+            <p>Tap your current plan on the Me tab, or go to iOS Settings → Apple ID → Subscriptions. Deleting the app does not cancel a subscription.</p>
+        </section>
 
-            <div class="card" style="align-items: flex-start; text-align: left;">
-                <h3>How do I delete my data?</h3>
-                <p>Delete the app — that removes everything, since it all lives on your device. If you made a Google
-                    Drive backup, also delete <strong>meplann_backup.json</strong> from your Drive.</p>
-            </div>
-        </div>
-    </section>
+        <section>
+            <h2 id="share">How do I save a YouTube video, link or PDF?</h2>
+            <p>In YouTube, Safari, Photos or Files, tap Share and choose MePlann. If you don't see it, scroll to the end of the app row, tap More and turn MePlann on. Shared items appear in My Day the next time you open the app.</p>
+        </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h2 class="logo">MePlann</h2>
-                    <p style="color: var(--text-dim); margin-top: 12px;">Crafted for Humanity.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="privacy.html">Privacy</a>
-                    <a href="terms.html">Terms</a>
-                    <a href="index.html">Home</a>
-                </div>
-            </div>
-            <div
-                style="margin-top: 60px; font-size: 0.8rem; color: var(--text-dim); border-top: 1px solid var(--border); padding-top: 40px; display: flex; justify-content: space-between;">
-                <span>© 2026 MePlann.</span>
-                <span>By Silverbot</span>
-            </div>
-        </div>
+        <section>
+            <h2 id="new-phone">I'm moving to a new iPhone. How do I keep my data?</h2>
+            <ul>
+                <li>On your old phone, go to Me → Settings, connect Google, and tap Sync Now. Write down your Recovery Code.</li>
+                <li>On the new phone, connect the same Google account, tap Restore Data, and enter the Recovery Code.</li>
+                <li>Tap Restore Purchases to bring back your plan.</li>
+            </ul>
+            <p>Without Google, use Backup to File in Settings and move the file yourself.</p>
+        </section>
+
+        <section>
+            <h2 id="deleted">I deleted something by mistake.</h2>
+            <p>Go to Me → Settings → Recently Deleted. Tasks, cards and chats stay there for 7 days. Swipe right on an item to restore it.</p>
+        </section>
+
+        <section>
+            <h2 id="private">Are my journal and chats private?</h2>
+            <p>They're stored on your device. When you use an AI feature, the text you write for it is sent through our server to OpenAI, and only after you agree. Our server doesn't keep your messages. See the <a href="privacy.html">Privacy Policy</a>.</p>
+        </section>
+
+        <section>
+            <h2 id="delete">How do I delete my account and data?</h2>
+            <p>Go to Me → Settings → Delete Account. This removes your account from our server, and the app then asks whether to erase the data on your device. Backups in your Google Drive stay until you delete the <code>MePlann</code> folder.</p>
+        </section>
+    </main>
+
+    <footer class="legal-footer">
+        <span>© 2026 MePlann · Silverbot</span>
+        <span class="legal-footer-links">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+        </span>
     </footer>
-
 </body>
 
 </html>

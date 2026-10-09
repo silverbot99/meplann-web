@@ -4,155 +4,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MePlann | Lên kế hoạch đúng theo cách đầu óc bạn hoạt động</title>
-    <meta name="description" content="Ứng dụng lên kế hoạch cho người hay nghĩ nhiều. MePlann 'đọc vị' năng lượng của bạn để sắp xếp công việc phù hợp, không ép bạn gồng theo khuôn mẫu cứng nhắc.">
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="../style.css">
+    <title>MePlann — kế hoạch cho những ngày đầu óc quá đầy</title>
+    <meta name="description" content="Lưu những gì muốn giữ, biến chúng thành danh sách ngắn cho hôm nay, và làm từng việc một. Ứng dụng lên kế hoạch nhẹ nhàng trên iPhone, có AI đồng hành.">
+    <meta property="og:title" content="MePlann">
+    <meta property="og:description" content="Lưu ý tưởng vào board, lên My Day, và làm từng việc một. Ứng dụng lên kế hoạch nhẹ nhàng trên iPhone, có AI đồng hành.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://meplann.com/assets/shot-planner.jpg">
+    <link rel="icon" type="image/png" href="../assets/icon.png">
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+    <link rel="alternate" hreflang="en" href="https://meplann.com/">
+    <link rel="stylesheet" href="../site.css">
 </head>
 
 <body>
-
-    <div class="atmosphere"></div>
-
-    <nav class="container">
-        <div class="logo">MePlann</div>
-        <div class="nav-links" style="display: flex; align-items: center;">
-            <div class="lang-switcher">
-                <a href="../index.html" class="lang-link">EN</a>
-                <a href="index.html" class="lang-link active">VI</a>
-            </div>
-            <a href="mailto:support@meplann.com" class="nav-link">Hỗ trợ</a>
-            <a href="https://app.meplann.com" class="btn" style="padding: 10px 24px; font-size: 0.9rem;">Mở
-                MePlann</a>
-        </div>
-    </nav>
-
-    <header class="hero container">
-        <div class="hero-grid">
-            <div class="hero-text">
-                <span class="section-label" style="text-align: left;">Dành cho người hay nghĩ nhiều</span>
-                <h1>Lên kế hoạch theo <span>năng lượng</span> của bạn.</h1>
-                <p>
-                    Say 'no' với những chiếc to-do list bắt ngày nào cũng phải năng suất như nhau.<br>
-                    MePlann là chiếc app biết 'đọc vị' năng lượng của bạn.<br>
-                    Đang tụt mood? App xếp việc nhẹ nhàng.<br>
-                    Đang vào guồng? App đẩy việc quan trọng lên.<br>
-                    Quên đi hệ thống quản lý thời gian mệt mỏi, đã đến lúc làm việc thuận theo trạng thái của chính mình cùng MePlann!
-                </p>
-                <div class="hero-actions">
-                    <a href="https://app.meplann.com" class="btn">Bắt đầu lên kế hoạch</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="phone-mockup">
-                    <div class="device-frame">
-                        <img src="../assets/app_preview.png" alt="Giao diện ứng dụng MePlann">
-                    </div>
-                </div>
+    <header class="site-nav">
+        <div class="wrap">
+            <a href="index.html" class="brand"><img src="../assets/icon.png" alt="" class="brand-mark" width="30" height="30">MePlann</a>
+            <div class="nav-right">
+                <span class="lang"><a href="../index.html" lang="en">EN</a><a href="index.html" class="active" lang="vi">VI</a></span>
+                <a href="support.html" class="hide-sm">Hỗ trợ</a>
+                <a href="#get" class="btn">Tải MePlann</a>
             </div>
         </div>
     </header>
 
-    <!-- Personality Section -->
-    <section class="personality container">
-        <span class="section-label">Cách nó hoạt động</span>
-        <h2 class="section-title">Thực tế khi bạn cần một kế hoạch,<br>nhẹ nhàng khi bạn cần nghỉ</h2>
-
-        <div class="feature-cards">
-            <div class="card">
-                <span class="card-icon">🫂</span>
-                <h3>Học cách bạn làm việc</h3>
-                <p>Một bài trắc nghiệm ngắn giúp MePlann biết bạn tư duy theo cấu trúc hay theo từng đợt ý tưởng
-                    bất chợt — và lên kế hoạch khác nhau tuỳ vào điều đó.</p>
+    <main>
+        <section class="hero">
+            <div class="wrap">
+                <div class="hero-copy">
+                    <span class="eyebrow">Lên kế hoạch trên iPhone · AI đồng hành</span>
+                    <h1>Đầu óc đầy quá? <em>Bắt đầu từ một việc.</em></h1>
+                    <p class="hero-lede">MePlann giữ lại video, link và ghi chú bạn muốn quay lại, biến chúng thành một danh sách ngắn cho hôm nay, và chỉ hiện từng việc một khi danh sách có vẻ quá sức.</p>
+                    <div class="hero-actions" id="get">
+                        <span class="btn" aria-disabled="true">Sắp có trên App Store</span>
+                        <a href="https://app.meplann.com" class="btn btn-ghost">Mở bản web</a>
+                    </div>
+                    <p class="hero-note">Bắt đầu miễn phí. Board và Planner dùng được không cần tài khoản.</p>
+                </div>
+                <div class="hero-shots" aria-hidden="true">
+                    <div class="phone phone-back"><img src="../assets/shot-board.jpg" alt="" width="507" height="1100" loading="eager"></div>
+                    <div class="phone phone-front"><img src="../assets/shot-planner.jpg" alt="" width="507" height="1100" loading="eager"></div>
+                </div>
             </div>
+        </section>
 
-            <div class="card">
-                <span class="card-icon">🧠</span>
-                <h3>Tái định hình, không hô hào suông</h3>
-                <p>Khi bạn bí hoặc căng thẳng, MePlann không chỉ bảo bạn "cố lên". Nó chia vấn đề thành một bước
-                    tiếp theo nhỏ hơn, thực sự làm được ngay.</p>
+        <section class="flow">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="eyebrow">Cách hoạt động</span>
+                    <h2>Gom lại, lên kế hoạch, rồi nhẹ nhàng với mình.</h2>
+                </div>
+                <div class="flow-grid">
+                    <article class="flow-step">
+                        <span class="tag">Board</span>
+                        <h3>Giữ lại những gì bạn gặp</h3>
+                        <p>Chia sẻ video YouTube, link, ảnh, ghi chú Markdown hay file PDF từ bất kỳ ứng dụng nào. Tất cả vào My Day, chờ bạn xếp vào board.</p>
+                    </article>
+                    <article class="flow-step">
+                        <span class="tag">Planner</span>
+                        <h3>Biến nó thành hôm nay</h3>
+                        <p>Bộ sưu tập, danh sách và task có bước nhỏ, có lời nhắc. Chọn vài việc cho My Day, phần còn lại cứ để đó.</p>
+                    </article>
+                    <article class="flow-step">
+                        <span class="tag">Gentle</span>
+                        <h3>Chậm lại khi thấy nặng</h3>
+                        <p>MePlann để ý xem bạn đang ôm bao nhiêu. Khi mức tải lên cao, ứng dụng mời bạn thở một phút và chọn một bước nhỏ hơn.</p>
+                    </article>
+                </div>
             </div>
+        </section>
 
-            <div class="card">
-                <span class="card-icon">🕊️</span>
-                <h3>Không dằn vặt khi bạn nghỉ</h3>
-                <p>Danh sách chưa xong không bị coi là thất bại. Nếu bạn đang quá tải, MePlann tự động giảm bớt
-                    những gì hiển thị thay vì chất thêm việc.</p>
+        <section class="one-thing">
+            <div class="wrap">
+                <div class="one-thing-copy">
+                    <span class="eyebrow">Just One Thing</span>
+                    <h2>Cả danh sách, nhưng từng việc một.</h2>
+                    <p>Khi My Day còn việc chưa xong, MePlann chỉ hiện việc kế tiếp. Làm xong hoặc bỏ qua, việc sau sẽ hiện ra. Phần còn lại tạm khuất đi, còn ghi chú của hôm nay nằm trong ngăn kéo bên dưới.</p>
+                </div>
+                <div class="one-card" aria-label="Ví dụ màn hình Just One Thing">
+                    <span class="label">Chỉ một việc thôi</span>
+                    <span class="task">Nhắn Linh về chuyện thứ Sáu</span>
+                    <span class="steps">Bước 1/3 · Mở cuộc trò chuyện</span>
+                    <div class="actions"><span class="done">Đánh dấu xong</span><span class="skip">Bỏ qua</span></div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Spirit Section -->
-    <section class="spirit">
-        <div class="container">
-            <span class="section-label">Điều làm nó khác biệt</span>
-            <h2 class="section-title">Được thiết kế để hợp với <span>bạn,</span> không phải ngược lại</h2>
-
-            <div class="spirit-grid">
-                <div class="spirit-item">
-                    <div class="spirit-content">
-                        <h3>Bỏ qua hệ thống chưa từng hợp với bạn</h3>
-                        <p>Bạn chắc đã thử Pomodoro, GTD, bullet journal. MePlann không bắt bạn học thêm một
-                            phương pháp nào nữa — nó tự điều chỉnh gợi ý theo cách não bạn vận hành.</p>
+        <section class="features">
+            <div class="wrap">
+                <div class="feature-list">
+                    <div class="feature">
+                        <div class="feature-copy">
+                            <span class="eyebrow">Điểm tải</span>
+                            <h2>Một con số cho biết bạn đang ôm bao nhiêu.</h2>
+                            <p>Thang 0–30, tính từ việc đang mở, việc quá hạn, bước chưa xong và giờ trong ngày: Nhẹ, Vừa hoặc Khá đầy. Khi con số chưa đúng với cảm giác thật, mười câu check-in sẽ thay nó cho tới hết ngày.</p>
+                            <div class="chips"><span>0–9 nhẹ</span><span>10–18 vừa</span><span>19–30 khá đầy</span></div>
+                        </div>
+                        <img class="feature-shot" src="../assets/shot-profile.jpg" alt="Hồ sơ MePlann với phong cách làm việc, kiểu tập trung và kết quả mức tải" width="507" height="1100" loading="lazy">
+                    </div>
+                    <div class="feature">
+                        <div class="feature-copy">
+                            <span class="eyebrow">AI đồng hành</span>
+                            <h2>Có người để nghĩ thành lời cùng.</h2>
+                            <p>Kể ra một nỗi lo, gỡ một suy nghĩ đang kẹt, chia nhỏ một việc, hoặc rút một lá tarot để ngẫm lại. AI biết phong cách làm việc và mức tải hôm nay của bạn, nên không thúc ép khi bạn đã đủ đầy.</p>
+                            <div class="chips"><span>Chat</span><span>Reframe</span><span>Chia bước</span><span>Tarot</span></div>
+                        </div>
+                        <img class="feature-shot" src="../assets/shot-chat.jpg" alt="Màn trò chuyện của MePlann với gợi ý mở đầu" width="507" height="1100" loading="lazy">
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="spirit-item">
-                    <div class="spirit-content">
-                        <h3>Có chỗ để suy nghĩ trước khi lên kế hoạch</h3>
-                        <p>Một lượt rút bài tarot nhanh hoặc 5 phút trút hết suy nghĩ, nằm ngay cạnh bảng công
-                            việc của bạn — vì thường phải dọn được đầu óc trước khi dọn được to-do list.</p>
+        <section class="privacy-band">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="eyebrow">Dữ liệu của bạn</span>
+                    <h2>Kế hoạch của bạn nằm trên điện thoại của bạn.</h2>
+                </div>
+                <div class="privacy-grid">
+                    <div class="privacy-item"><strong>Lưu trên máy</strong><p>Board, task, nhật ký, trò chuyện và chân dung bản thân nằm trên iPhone của bạn. Board và Planner không cần tài khoản.</p></div>
+                    <div class="privacy-item"><strong>AI chỉ khi bạn cần</strong><p>Nội dung chỉ được gửi tới OpenAI qua máy chủ của chúng tôi khi bạn dùng tính năng AI, và chỉ sau khi bạn đồng ý. Máy chủ không lưu tin nhắn của bạn.</p></div>
+                    <div class="privacy-item"><strong>Sao lưu mã hoá, trong Drive của bạn</strong><p>Bản sao lưu (tuỳ chọn) nằm trong Google Drive của chính bạn, mã hoá bằng khoá chỉ bạn giữ.</p></div>
+                    <div class="privacy-item"><strong>Vừa xoá</strong><p>Task, thẻ và trò chuyện đã xoá được giữ 7 ngày, nên lỡ tay cũng chưa mất hẳn.</p></div>
+                </div>
+                <p class="pricing-note"><a href="privacy.html">Đọc Chính sách quyền riêng tư</a></p>
+            </div>
+        </section>
+
+        <section class="pricing">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="eyebrow">Các gói</span>
+                    <h2>Bắt đầu miễn phí. Nâng cấp khi cần thêm AI.</h2>
+                </div>
+                <div class="plans">
+                    <div class="plan">
+                        <span class="name">Miễn phí</span>
+                        <span class="price">Lên kế hoạch không cần tài khoản</span>
+                        <ul>
+                            <li>Board, Planner, My Day, Just One Thing</li>
+                            <li>Điểm tải và chế độ Gentle</li>
+                            <li>Một lượng AI nhỏ mỗi ngày với tài khoản miễn phí</li>
+                        </ul>
+                    </div>
+                    <div class="plan featured">
+                        <span class="name">Pro</span>
+                        <span class="price">Gói tháng hoặc năm · dùng thử 1 tuần</span>
+                        <ul>
+                            <li>500 Energy mỗi tháng cho tính năng AI</li>
+                            <li>Mô hình AI mạnh hơn khi chia nhỏ việc</li>
+                            <li>Tarot và Reframe không giới hạn theo ngày</li>
+                        </ul>
+                    </div>
+                    <div class="plan">
+                        <span class="name">Pro+</span>
+                        <span class="price">Gói tháng</span>
+                        <ul>
+                            <li>2.000 Energy mỗi tháng</li>
+                            <li>Mọi thứ trong Pro</li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="spirit-item">
-                    <div class="spirit-content">
-                        <h3>Dữ liệu của bạn vẫn là của bạn</h3>
-                        <p>Mọi thứ được lưu trên máy trước tiên. Sao lưu lên cloud có sẵn nếu bạn muốn, không bắt
-                            buộc — những suy nghĩ chưa qua chỉnh sửa của bạn không cần rời khỏi thiết bị.</p>
-                    </div>
-                </div>
+                <p class="pricing-note">Giá theo khu vực của bạn hiện trong ứng dụng. Gói Energy mua thêm lúc nào cũng được và không hết hạn. Gói đăng ký tự gia hạn cho tới khi bạn huỷ trong cài đặt Apple ID. <a href="terms.html">Điều khoản sử dụng</a></p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Mission Section -->
-    <section class="mission container">
-        <div class="mission-box">
-            <span class="section-label">Vì sao MePlann ra đời?</span>
-            <h2>Lên kế hoạch cho hôm nay. Thấu hiểu quy luật của chính mình.</h2>
-            <p>Hầu hết các công cụ năng suất chỉ chăm chăm ép bạn làm được nhiều việc nhất rồi dừng lại ở đó. Chúng tôi nghĩ câu hỏi đáng lưu tâm hơn là: Vì sao cùng một việc, thứ Hai làm nhẹ tênh mà thứ Năm lại thấy bất khả thi? MePlann được tạo ra để giúp bạn nhận ra nhịp độ đó của bản thân, qua từng ngày bình dị nhất.</p>
-        </div>
-    </section>
+        <section class="closing">
+            <div class="wrap">
+                <h2>Lên kế hoạch cho ngày bạn thật sự có.</h2>
+                <p>MePlann dành cho người hay nghĩ nhiều, lưu nhiều, và đôi khi cần danh sách ngắn lại thay vì dài thêm.</p>
+                <p class="care-note">MePlann là công cụ lên kế hoạch và tự suy ngẫm, không phải dịch vụ y tế hay chăm sóc sức khoẻ tâm thần. Nếu bạn đang gặp khủng hoảng, hãy gọi cấp cứu hoặc đường dây hỗ trợ nơi bạn sống.</p>
+            </div>
+        </section>
+    </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h2 class="logo">MePlann</h2>
-                    <p style="color: var(--text-dim); margin-top: 12px; max-width: 300px;">Ứng dụng lên kế hoạch
-                        cho những người không vận hành đầu óc theo chế độ tự động.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="privacy.html">Bảo mật</a>
-                    <a href="terms.html">Điều khoản</a>
-                    <a href="mailto:support@meplann.com">Hỗ trợ</a>
-                </div>
-            </div>
-            <div
-                style="margin-top: 60px; font-size: 0.8rem; color: var(--text-dim); border-top: 1px solid var(--border); padding-top: 40px; display: flex; justify-content: space-between;">
-                <span>© 2026 MePlann.</span>
-                <span>Bởi Silverbot</span>
-            </div>
+    <footer class="site-footer">
+        <div class="wrap">
+            <span>© 2026 MePlann · Silverbot</span>
+            <nav aria-label="Chân trang">
+                <a href="privacy.html">Quyền riêng tư</a>
+                <a href="terms.html">Điều khoản</a>
+                <a href="support.html">Hỗ trợ</a>
+                <a href="mailto:support@meplann.com">support@meplann.com</a>
+            </nav>
         </div>
     </footer>
-
 </body>
 
 </html>

@@ -1,0 +1,185 @@
+/* Legal pages (Privacy, Terms): một cột đọc ~68 ký tự, cùng bảng màu với trang chủ. */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+    --lg-bg: #FBFAFF;
+    --lg-surface: #FFFFFF;
+    --lg-fg: #2B1C50;
+    --lg-muted: #5C527F;
+    --lg-dim: #8A8496;
+    --lg-accent: #7E60DF;
+    --lg-accent-soft: #EDE8FF;
+    --lg-border: #E6E0F5;
+    --lg-display: "Crimson Text", Georgia, "Times New Roman", serif;
+    --lg-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --lg-bg: #17131F;
+        --lg-surface: #211A2E;
+        --lg-fg: #F0E8FF;
+        --lg-muted: #CFC4E4;
+        --lg-dim: #9B8FB5;
+        --lg-accent: #B9A2FF;
+        --lg-accent-soft: #2E2445;
+        --lg-border: #352A4D;
+        color-scheme: dark;
+    }
+}
+
+:root[data-theme="dark"] {
+    --lg-bg: #17131F;
+    --lg-surface: #211A2E;
+    --lg-fg: #F0E8FF;
+    --lg-muted: #CFC4E4;
+    --lg-dim: #9B8FB5;
+    --lg-accent: #B9A2FF;
+    --lg-accent-soft: #2E2445;
+    --lg-border: #352A4D;
+    color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--lg-bg);
+    color: var(--lg-fg);
+    font-family: var(--lg-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--lg-accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--lg-accent); outline-offset: 2px; border-radius: 2px; }
+
+.legal-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem max(1rem, calc((100vw - 46rem) / 2));
+    background: color-mix(in srgb, var(--lg-bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--lg-border);
+}
+
+.legal-brand {
+    font-family: var(--lg-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--lg-fg);
+    text-decoration: none;
+}
+
+.legal-links { display: flex; gap: 0.9rem; font-size: 0.85rem; }
+.legal-links a { color: var(--lg-dim); text-decoration: none; }
+.legal-links a.active { color: var(--lg-accent); font-weight: 600; }
+
+.legal {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 3rem 1rem 4rem;
+}
+
+.legal-eyebrow {
+    margin: 0 0 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--lg-accent);
+}
+
+.legal h1 {
+    margin: 0 0 0.75rem;
+    font-family: var(--lg-display);
+    font-size: clamp(2.1rem, 6vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+    text-wrap: balance;
+}
+
+.legal-updated { margin: 0 0 2rem; font-size: 0.875rem; color: var(--lg-dim); }
+
+.legal section { max-width: 68ch; }
+
+.legal h2 {
+    margin: 2.75rem 0 0.75rem;
+    font-family: var(--lg-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.25;
+    text-wrap: balance;
+    scroll-margin-top: 5rem;
+}
+
+.legal p, .legal li { color: var(--lg-muted); }
+.legal p { margin: 0 0 1rem; }
+.legal ul { margin: 0 0 1rem; padding-left: 1.25rem; display: grid; gap: 0.5rem; }
+.legal strong { color: var(--lg-fg); font-weight: 600; }
+
+.legal code {
+    font-size: 0.85em;
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+    background: var(--lg-accent-soft);
+    color: var(--lg-fg);
+    overflow-wrap: anywhere;
+}
+
+/* Tóm tắt đầu trang: điểm duy nhất được đóng khung. */
+.legal-summary {
+    max-width: 68ch;
+    padding: 1.25rem 1.4rem;
+    border: 1px solid var(--lg-border);
+    border-radius: 14px;
+    background: var(--lg-surface);
+}
+.legal-summary h2 { margin: 0 0 0.6rem; font-size: 1.25rem; }
+.legal-summary ul { margin: 0; }
+
+/* Khối lưu ý (Terms). */
+.legal-note {
+    max-width: 68ch;
+    margin: 0 0 1.5rem;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    background: var(--lg-accent-soft);
+}
+.legal-note p { margin: 0; color: var(--lg-fg); }
+
+.legal-table-wrap { overflow-x: auto; margin: 0 0 1rem; }
+.legal-table { width: 100%; min-width: 30rem; border-collapse: collapse; font-size: 0.92rem; }
+.legal-table th, .legal-table td {
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--lg-border);
+}
+.legal-table th { color: var(--lg-fg); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.legal-table td { color: var(--lg-muted); }
+.legal-table td:first-child { color: var(--lg-fg); font-weight: 500; white-space: nowrap; }
+
+.legal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 1.5rem max(1rem, calc((100vw - 46rem) / 2));
+    border-top: 1px solid var(--lg-border);
+    font-size: 0.85rem;
+    color: var(--lg-dim);
+}
+.legal-footer-links { display: flex; gap: 1rem; }
+.legal-footer-links a { color: var(--lg-muted); text-decoration: none; }
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+}
