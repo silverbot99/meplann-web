@@ -50,7 +50,7 @@
 
         <section>
             <h2 id="account">2. Your MePlann account</h2>
-            <p>An account is optional. You need one only for AI features and for syncing your plan to the MePlann web app. When you create one, our server stores:</p>
+            <p>An account is optional. You need one only for AI features. Your boards, tasks, notes and chats are not uploaded to our server. When you create an account, our server stores only:</p>
             <ul>
                 <li><strong>Email address and name</strong>, to sign you in and contact you about your account.</li>
                 <li><strong>Password</strong>, stored only as a one-way hash (bcrypt). We can't read it.</li>
@@ -58,8 +58,6 @@
                 <li><strong>AI usage counts</strong>: per day and per feature, the number of requests and the number of tokens used. We count usage. We don't store what you wrote.</li>
                 <li><strong>Push notification token</strong>, if you allow notifications while signed in, so we can send account and product messages.</li>
             </ul>
-            <p><strong>Web sync (off by default).</strong> If you turn on Cloud Sync in Settings, the boards and tasks you sync are stored on our server so they appear in the MePlann web app. Nothing is synced while this is off.</p>
-            <p><strong>Shared lists.</strong> When you create a share link for a task list, a copy of that list (titles, notes, steps and status) is stored on our server so anyone with the link can open it.</p>
         </section>
 
         <section>
@@ -112,7 +110,7 @@
         <section>
             <h2 id="delete">7. Deleting your data</h2>
             <ul>
-                <li><strong>Your account:</strong> in the app, go to Me → Settings → Delete Account. This permanently deletes your account, synced boards and tasks, AI usage counts, Energy balance and push tokens from our server. Afterwards the app asks whether to keep or erase the data on your device.</li>
+                <li><strong>Your account:</strong> in the app, go to Me → Settings → Delete Account. This permanently deletes your account, AI usage counts, Energy balance and push tokens from our server. Afterwards the app asks whether to keep or erase the data on your device.</li>
                 <li><strong>Data on your device:</strong> erase it during account deletion, or delete the app.</li>
                 <li><strong>Google:</strong> delete the <code>MePlann</code> folder in your Drive, and revoke access in your <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google account permissions</a>. Calendar events MePlann created stay until you remove them.</li>
                 <li><strong>Subscriptions</strong> are not cancelled by deleting your account. Cancel them in iOS Settings → Apple ID → Subscriptions.</li>
@@ -122,7 +120,7 @@
 
         <section>
             <h2 id="security">8. Security and retention</h2>
-            <p>Traffic between the app and our server uses HTTPS. We keep account data while your account exists and delete it when you delete the account. Shared list links are not tied to your account, so deleting your account does not remove them. Email us with the link and we will delete it.</p>
+            <p>Traffic between the app and our server uses HTTPS. We keep account data while your account exists and delete it when you delete the account.</p>
         </section>
 
         <section>
